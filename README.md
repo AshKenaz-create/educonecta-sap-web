@@ -9,6 +9,8 @@ de Padua**, Timbío, Cauca.
 - **Institución beneficiaria:** Institución Educativa San Antonio de Padua.
 - **Municipio:** Timbío, Cauca.
 
+**Consultar la página:** https://ashkenaz-create.github.io/educonecta-sap-web/
+
 ## Descripción
 
 EduConecta SAP reúne en un solo sitio la información de la institución:
