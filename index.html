@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Institución Educativa San Antonio de Padua</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="index.html" class="header__logo">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="header__escudo">
+        <span class="header__nombre">Institución Educativa San Antonio de Padua</span>
+      </a>
+
+      <!-- Botón del menú móvil: solo visible en pantallas pequeñas -->
+      <button type="button" class="header__menu-boton" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a href="index.html" class="nav__enlace" aria-current="page">Inicio</a></li>
+          <li><a href="pages/servicios-academicos.html" class="nav__enlace">Servicios</a></li>
+          <li><a href="pages/nosotros-institucion.html" class="nav__enlace">Nosotros</a></li>
+          <li><a href="pages/noticias.html" class="nav__enlace">Noticias</a></li>
+          <li><a href="pages/admisiones.html" class="nav__enlace">Admisiones</a></li>
+        </ul>
+      </nav>
+
+      <a href="pages/contacto.html" class="boton boton--primario">Contáctanos</a>
+    </div>
+  </header>
+
+  <main class="contenido-principal">
+
+    <!--
+      Banner principal: carrusel de tres fotografías ya integradas al sitio,
+      manejado por portada.js. No avanza solo. Sin JavaScript solo se ve la
+      primera fotografía. El nombre y el lema quedan fijos debajo del carrusel.
+    -->
+    <section class="banner">
+      <div class="portada" role="region" aria-roledescription="carrusel" aria-label="Fotografías de la institución">
+        <div class="portada__ventana">
+          <div class="portada__pista">
+            <figure class="portada__diapositiva" role="group" aria-roledescription="diapositiva" aria-label="1 de 3">
+              <img src="assets/images/inicio/banner-principal.jpg" alt="Estudiantes y docente frente a la fachada de la Institución Educativa San Antonio de Padua" class="portada__imagen">
+              <figcaption class="portada__leyenda">Fachada de la institución</figcaption>
+            </figure>
+            <figure class="portada__diapositiva" role="group" aria-roledescription="diapositiva" aria-label="2 de 3">
+              <img src="assets/images/noticias/noticia-03.jpg" alt="Estudiantes resolviendo una prueba escrita en el aula" class="portada__imagen">
+              <figcaption class="portada__leyenda">Estudiantes en el aula</figcaption>
+            </figure>
+            <figure class="portada__diapositiva" role="group" aria-roledescription="diapositiva" aria-label="3 de 3">
+              <img src="assets/images/extracurriculares/banda-marcial.jpg" alt="Estudiantes de la Banda Marcial de la Institución Educativa San Antonio de Padua" class="portada__imagen portada__imagen--banda">
+              <figcaption class="portada__leyenda">Banda Marcial</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Controles: ocultos hasta que portada.js los activa -->
+        <button type="button" class="portada__flecha portada__flecha--anterior" aria-label="Fotografía anterior" hidden><span aria-hidden="true">&#8249;</span></button>
+        <button type="button" class="portada__flecha portada__flecha--siguiente" aria-label="Fotografía siguiente" hidden><span aria-hidden="true">&#8250;</span></button>
+        <div class="portada__indicadores" hidden>
+          <button type="button" class="portada__indicador" aria-label="Ver fotografía 1: Fachada de la institución"></button>
+          <button type="button" class="portada__indicador" aria-label="Ver fotografía 2: Estudiantes en el aula"></button>
+          <button type="button" class="portada__indicador" aria-label="Ver fotografía 3: Banda Marcial"></button>
+        </div>
+        <p class="portada__estado sr-only" aria-live="polite"></p>
+      </div>
+
+      <div class="banner__contenido">
+        <h1>Institución Educativa San Antonio de Padua</h1>
+        <p>Fortaleza en el saber, destreza en el hacer e integridad en el ser.</p>
+      </div>
+    </section>
+
+    <!-- Sobre Nosotros: texto basado únicamente en informacion-sap.pdf -->
+    <section class="sobre-nosotros contenedor">
+      <img src="assets/images/inicio/sobre-nosotros.jpg" alt="Presentación institucional Quiénes Somos de la Institución Educativa San Antonio de Padua" class="sobre-nosotros__imagen">
+      <div class="sobre-nosotros__texto">
+        <h2>Sobre Nosotros</h2>
+        <p>
+          La Institución Educativa San Antonio de Padua, en Timbío, Cauca, tiene
+          historia desde 1926. Nuestro lema institucional es «Fortaleza en el
+          saber, destreza en el hacer e integridad en el ser».
+        </p>
+        <div class="sobre-nosotros__cta">
+          <a href="pages/nosotros-institucion.html" class="boton boton--primario">Conoce Más</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conoce nuestra institución: toda la tarjeta es clicable (el enlace del título se extiende con CSS) -->
+    <section class="accesos contenedor">
+      <h2>Conoce nuestra institución</h2>
+      <div class="accesos__grid">
+        <article class="tarjeta tarjeta--enlace">
+          <img src="assets/images/campus/recorrido-360.jpg" alt="Pieza gráfica del Recorrido 360° por las instalaciones de la institución" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><a href="pages/nosotros-campus.html" class="circulo">Recorrido 360°</a></h3>
+          <!-- La tarjeta lleva al recorrido 360° de la sección de Campus -->
+          <p class="tarjeta__etiqueta">Explora nuestros espacios en 360°</p>
+        </article>
+        <article class="tarjeta tarjeta--enlace">
+          <img src="assets/images/campus/laboratorios.jpg" alt="Pieza gráfica ilustrativa de la sección Laboratorios" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><a href="pages/nosotros-campus.html" class="circulo">Laboratorios</a></h3>
+          <p class="tarjeta__etiqueta">Explora nuestros espacios de aprendizaje</p>
+        </article>
+        <article class="tarjeta tarjeta--enlace">
+          <img src="assets/images/inicio/actividades.jpg" alt="Pieza gráfica de actividades y eventos de la institución" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><a href="pages/servicios-extracurriculares.html" class="circulo">Actividades</a></h3>
+          <p class="tarjeta__etiqueta">Experiencias formativas e institucionales</p>
+        </article>
+        <article class="tarjeta tarjeta--enlace">
+          <img src="assets/images/inicio/eventos.jpg" alt="Estudiantes en una presentación durante un evento institucional" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><a href="pages/noticias.html" class="circulo">Eventos</a></h3>
+          <p class="tarjeta__etiqueta">Momentos que fortalecen la vida escolar</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Banda de estadísticas: cifras de muestra, pendientes de validación institucional (ver PENDIENTES.md) -->
+    <section class="estadisticas">
+      <div class="estadisticas__grid contenedor">
+        <div class="estadisticas__item">
+          <span class="estadisticas__numero">300+</span>
+          <span class="estadisticas__etiqueta">Estudiantes jornada mañana</span>
+        </div>
+        <div class="estadisticas__item">
+          <span class="estadisticas__numero">250+</span>
+          <span class="estadisticas__etiqueta">Estudiantes jornada tarde</span>
+        </div>
+        <div class="estadisticas__item">
+          <span class="estadisticas__numero">100 años</span>
+          <span class="estadisticas__etiqueta">Trayectoria</span>
+        </div>
+        <div class="estadisticas__item">
+          <span class="estadisticas__numero">35+</span>
+          <span class="estadisticas__etiqueta">Profesores</span>
+        </div>
+        <div class="estadisticas__item">
+          <span class="estadisticas__numero">10+</span>
+          <span class="estadisticas__etiqueta">Programas institucionales</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Noticias y Eventos: piezas gráficas de apoyo visual; los títulos describen cada pieza y su contenido sigue sujeto a validación institucional -->
+    <section class="noticias-eventos contenedor">
+      <h2>Noticias y Eventos</h2>
+      <div class="noticias-eventos__grid">
+        <article class="tarjeta tarjeta--grande">
+          <img src="assets/images/noticias/pieza-destacada.jpg" alt="Pieza gráfica de noticias con el escudo institucional y una urna de votación" class="tarjeta__imagen tarjeta__imagen--destacada">
+          <h3 class="tarjeta__titulo">Elecciones presidenciales Colombia 2026</h3>
+          <p>
+            Pieza informativa de referencia sobre el contexto electoral en
+            Colombia.
+          </p>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <img src="assets/images/noticias/pieza-01.jpg" alt="Pieza gráfica con estudiantes en una sala de computadores" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">Nueva sala de informática para nuestros estudiantes</span></h3>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <img src="assets/images/noticias/pieza-02.jpg" alt="Pieza gráfica sobre prevención ante sismos" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">Terremoto en Colombia: prevención y recomendaciones</span></h3>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <img src="assets/images/noticias/pieza-03.jpg" alt="Pieza gráfica con estudiantes frente a un paisaje con un volcán" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">Brigadas por el volcán intercolegiados</span></h3>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <img src="assets/images/noticias/pieza-04.jpg" alt="Pieza gráfica con estudiantes en actividades académicas, deportivas y artísticas" class="tarjeta__imagen tarjeta__imagen--arriba">
+          <h3 class="tarjeta__titulo"><span class="circulo">Showcase institucional de talento estudiantil</span></h3>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+
+      <div class="footer__institucion">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="footer__escudo">
+        <p class="footer__nombre">Institución Educativa San Antonio de Padua</p>
+        <!-- Redes sociales: Facebook enlaza a la página oficial; las demás se muestran como texto porque sus enlaces siguen pendientes -->
+        <ul class="footer__redes">
+          <li><a href="https://www.facebook.com/ColegioSanAntonioDePaduaTimbio" class="footer__red-social footer__red-social--enlace" target="_blank" rel="noopener noreferrer">Facebook<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li><span class="footer__red-social">Instagram</span></li>
+          <li><span class="footer__red-social">LinkedIn</span></li>
+          <li><span class="footer__red-social">YouTube</span></li>
+        </ul>
+      </div>
+
+      <div class="footer__enlaces">
+        <h3 class="footer__titulo">Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pages/servicios-academicos.html">Servicios</a></li>
+          <li><a href="pages/nosotros-institucion.html">Nosotros</a></li>
+          <li><a href="pages/noticias.html">Noticias</a></li>
+          <li><a href="pages/admisiones.html">Admisiones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contacto">
+        <h3 class="footer__titulo">Contacto</h3>
+        <ul>
+          <!-- Canales de contacto entregados por la institución (WhatsApp y correo) -->
+          <li>WhatsApp: <a href="https://wa.me/573105397139" target="_blank" rel="noopener noreferrer">310 539 7139<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li>Correo: <a href="mailto:colegiosanantoniodep@gmail.com">colegiosanantoniodep@gmail.com</a></li>
+          <li>Ubicación: Timbío, Cauca</li>
+        </ul>
+      </div>
+
+      <div class="footer__ubicacion">
+        <h3 class="footer__titulo">Ubicación</h3>
+        <!-- Dirección entregada por la institución y búsqueda de esa dirección en Google Maps (sin coordenadas ni mapa incrustado) -->
+        <div class="footer__ubicacion-pendiente">
+          <p class="footer__ubicacion-lugar">Calle 15 No. 14-89, Barrio Belén, Timbío, Cauca, Colombia</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2015%20No.%2014-89%2C%20Barrio%20Bel%C3%A9n%2C%20Timb%C3%ADo%2C%20Cauca%2C%20Colombia" class="footer__mapa" target="_blank" rel="noopener noreferrer">Ver en Google Maps<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__linea-inferior">
+      <p>&copy; 2026 Institución Educativa San Antonio de Padua. Todos los derechos reservados.</p>
+      <!-- Documentos legales: se muestran como texto porque los textos oficiales siguen pendientes -->
+      <ul class="footer__legal">
+        <li><span>Política de Privacidad</span></li>
+        <li><span>Términos y Condiciones</span></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/portada.js"></script>
+  <script src="js/animaciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Institución Educativa San Antonio de Padua</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="../index.html" class="header__logo">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="header__escudo">
+        <span class="header__nombre">Institución Educativa San Antonio de Padua</span>
+      </a>
+
+      <!-- Botón del menú móvil: solo visible en pantallas pequeñas -->
+      <button type="button" class="header__menu-boton" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a href="../index.html" class="nav__enlace">Inicio</a></li>
+          <li><a href="servicios-academicos.html" class="nav__enlace">Servicios</a></li>
+          <li><a href="nosotros-institucion.html" class="nav__enlace">Nosotros</a></li>
+          <li><a href="noticias.html" class="nav__enlace">Noticias</a></li>
+          <li><a href="admisiones.html" class="nav__enlace">Admisiones</a></li>
+        </ul>
+      </nav>
+
+      <a href="contacto.html" class="boton boton--primario" aria-current="page">Contáctanos</a>
+    </div>
+  </header>
+
+  <main class="contenido-principal">
+
+    <!-- Sin banner: fiel al wireframe, título directo tras el header -->
+    <section class="contacto-titulo contenedor">
+      <h1>Contacto</h1>
+    </section>
+
+    <!--
+      Información de contacto entregada por la institución: WhatsApp, correo y
+      dirección. WhatsApp abre una conversación en el sitio externo (requiere internet).
+    -->
+    <section class="contacto-info contenedor">
+      <ul class="contacto-info__lista">
+        <li class="contacto-info__item tarjeta--circulo">
+          <span class="contacto-info__etiqueta"><span class="circulo circulo--compacto">WhatsApp</span></span>
+          <span class="contacto-info__dato"><a href="https://wa.me/573105397139" class="enlace-texto" target="_blank" rel="noopener noreferrer">310 539 7139<span class="sr-only"> (se abre en una pestaña nueva)</span></a></span>
+          <span class="contacto-info__descripcion">Canal disponible para orientación general y consultas de la comunidad educativa.</span>
+        </li>
+        <li class="contacto-info__item tarjeta--circulo">
+          <span class="contacto-info__etiqueta"><span class="circulo circulo--compacto">Correo</span></span>
+          <span class="contacto-info__dato"><a href="mailto:colegiosanantoniodep@gmail.com" class="enlace-texto">colegiosanantoniodep@gmail.com</a></span>
+          <span class="contacto-info__descripcion">Espacio destinado a solicitudes, orientación e información institucional.</span>
+        </li>
+        <li class="contacto-info__item tarjeta--circulo">
+          <span class="contacto-info__etiqueta"><span class="circulo circulo--compacto">Ubicación</span></span>
+          <span class="contacto-info__dato">Calle 15 No. 14-89, Barrio Belén, Timbío, Cauca, Colombia</span>
+          <span class="contacto-info__descripcion">Sede de la Institución Educativa San Antonio de Padua.</span>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2015%20No.%2014-89%2C%20Barrio%20Bel%C3%A9n%2C%20Timb%C3%ADo%2C%20Cauca%2C%20Colombia" class="boton boton--primario contacto-info__mapa" target="_blank" rel="noopener noreferrer">Ver en Google Maps<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+
+      <div class="footer__institucion">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="footer__escudo">
+        <p class="footer__nombre">Institución Educativa San Antonio de Padua</p>
+        <!-- Redes sociales: Facebook enlaza a la página oficial; las demás se muestran como texto porque sus enlaces siguen pendientes -->
+        <ul class="footer__redes">
+          <li><a href="https://www.facebook.com/ColegioSanAntonioDePaduaTimbio" class="footer__red-social footer__red-social--enlace" target="_blank" rel="noopener noreferrer">Facebook<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li><span class="footer__red-social">Instagram</span></li>
+          <li><span class="footer__red-social">LinkedIn</span></li>
+          <li><span class="footer__red-social">YouTube</span></li>
+        </ul>
+      </div>
+
+      <div class="footer__enlaces">
+        <h3 class="footer__titulo">Enlaces rápidos</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="servicios-academicos.html">Servicios</a></li>
+          <li><a href="nosotros-institucion.html">Nosotros</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="admisiones.html">Admisiones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contacto">
+        <h3 class="footer__titulo">Contacto</h3>
+        <ul>
+          <!-- Canales de contacto entregados por la institución (WhatsApp y correo) -->
+          <li>WhatsApp: <a href="https://wa.me/573105397139" target="_blank" rel="noopener noreferrer">310 539 7139<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li>Correo: <a href="mailto:colegiosanantoniodep@gmail.com">colegiosanantoniodep@gmail.com</a></li>
+          <li>Ubicación: Timbío, Cauca</li>
+        </ul>
+      </div>
+
+      <div class="footer__ubicacion">
+        <h3 class="footer__titulo">Ubicación</h3>
+        <!-- Dirección entregada por la institución y búsqueda de esa dirección en Google Maps (sin coordenadas ni mapa incrustado) -->
+        <div class="footer__ubicacion-pendiente">
+          <p class="footer__ubicacion-lugar">Calle 15 No. 14-89, Barrio Belén, Timbío, Cauca, Colombia</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2015%20No.%2014-89%2C%20Barrio%20Bel%C3%A9n%2C%20Timb%C3%ADo%2C%20Cauca%2C%20Colombia" class="footer__mapa" target="_blank" rel="noopener noreferrer">Ver en Google Maps<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__linea-inferior">
+      <p>&copy; 2026 Institución Educativa San Antonio de Padua. Todos los derechos reservados.</p>
+      <!-- Documentos legales: se muestran como texto porque los textos oficiales siguen pendientes -->
+      <ul class="footer__legal">
+        <li><span>Política de Privacidad</span></li>
+        <li><span>Términos y Condiciones</span></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

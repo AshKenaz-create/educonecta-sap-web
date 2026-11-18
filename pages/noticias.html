@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias - Institución Educativa San Antonio de Padua</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="../index.html" class="header__logo">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="header__escudo">
+        <span class="header__nombre">Institución Educativa San Antonio de Padua</span>
+      </a>
+
+      <!-- Botón del menú móvil: solo visible en pantallas pequeñas -->
+      <button type="button" class="header__menu-boton" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a href="../index.html" class="nav__enlace">Inicio</a></li>
+          <li><a href="servicios-academicos.html" class="nav__enlace">Servicios</a></li>
+          <li><a href="nosotros-institucion.html" class="nav__enlace">Nosotros</a></li>
+          <li><a href="noticias.html" class="nav__enlace" aria-current="page">Noticias</a></li>
+          <li><a href="admisiones.html" class="nav__enlace">Admisiones</a></li>
+        </ul>
+      </nav>
+
+      <a href="contacto.html" class="boton boton--primario">Contáctanos</a>
+    </div>
+  </header>
+
+  <main class="contenido-principal">
+
+    <!-- Banner de sección -->
+    <section class="banner">
+      <img src="../assets/images/noticias/banner-noticias.jpg" alt="Pieza gráfica de la sección Noticias con el escudo institucional" class="banner__imagen">
+      <div class="banner__contenido">
+        <h1>Noticias</h1>
+      </div>
+    </section>
+
+    <!--
+      Información Importante: descripción general de cada tema. No son
+      comunicados oficiales; se reemplazarán cuando la institución los entregue.
+    -->
+    <section class="informacion-importante contenedor">
+      <h2>Información Importante</h2>
+      <div class="informacion-importante__grid">
+        <article class="tarjeta tarjeta--circulo">
+          <h3 class="tarjeta__titulo"><span class="circulo circulo--compacto">Actualización de información institucional</span></h3>
+          <p>Espacio dedicado a compartir comunicados, novedades y temas de interés para estudiantes, familias y demás integrantes de la comunidad educativa.</p>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <h3 class="tarjeta__titulo"><span class="circulo circulo--compacto">Admisiones y procesos escolares</span></h3>
+          <p>Aquí se reúne información relacionada con los procesos de ingreso, matrícula, orientación académica y participación de las familias en la vida escolar.</p>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <h3 class="tarjeta__titulo"><span class="circulo circulo--compacto">Actividades y eventos institucionales</span></h3>
+          <p>Un espacio para conocer las actividades académicas, culturales, deportivas y de integración que forman parte de la vida escolar.</p>
+        </article>
+      </div>
+    </section>
+
+    <!--
+      Noticias y Eventos: sin noticias reales todavía. Las fotografías son
+      solo apoyo visual y no corresponden a noticias verificadas. Los títulos
+      son provisionales y solo describen lo que muestra cada fotografía; las
+      noticias oficiales y sus fechas siguen pendientes. Cada tarjeta abre su
+      detalle en noticia-evento.html indicando cuál mostrar con ?noticia=.
+    -->
+    <section class="noticias-eventos contenedor">
+      <h2>Noticias y Eventos</h2>
+      <div class="noticias-eventos__grid">
+        <a href="noticia-evento.html?noticia=encuentro-estudiantes" class="tarjeta">
+          <img src="../assets/images/noticias/noticia-01.jpg" alt="Estudiantes formados en el patio de la institución" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">Encuentro institucional de estudiantes</span></h3>
+        </a>
+        <a href="noticia-evento.html?noticia=formacion-orientacion" class="tarjeta">
+          <img src="../assets/images/noticias/noticia-02.jpg" alt="Estudiantes atendiendo una charla en un salón" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">Espacio de formación y orientación</span></h3>
+        </a>
+        <a href="noticia-evento.html?noticia=jornada-academica" class="tarjeta">
+          <img src="../assets/images/noticias/noticia-03.jpg" alt="Estudiantes resolviendo una prueba escrita en el aula" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">Jornada académica en el aula</span></h3>
+        </a>
+        <a href="noticia-evento.html?noticia=actividad-cultural" class="tarjeta">
+          <img src="../assets/images/noticias/noticia-04.jpg" alt="Grupo de estudiantes con trajes de danza en el patio" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">Actividad cultural estudiantil</span></h3>
+        </a>
+      </div>
+      <!-- Archivo histórico: blog antiguo de la institución; no es una fuente actualizada de noticias -->
+      <p class="enlace-externo__nota noticias-eventos__archivo">Archivo histórico: <a href="https://timbio.blogspot.com/" class="enlace-texto" target="_blank" rel="noopener noreferrer">Blog institucional antiguo<span class="sr-only"> (se abre en una pestaña nueva)</span></a>. No es una fuente actualizada de noticias.</p>
+    </section>
+
+    <!--
+      Calendario de Actividades: calendar.js genera los días del mes, la
+      navegación y las actividades de demostración, marcadas como «Ejemplo».
+      Todavía no hay actividades institucionales confirmadas.
+    -->
+    <section class="calendario contenedor" aria-labelledby="titulo-calendario">
+      <h2 id="titulo-calendario">Calendario de Actividades</h2>
+
+      <!-- Mensaje que se ve si el calendario no puede cargarse (sin JavaScript) -->
+      <p class="calendario__sin-js">El calendario interactivo necesita JavaScript para mostrarse.</p>
+
+      <!-- Calendario interactivo: oculto hasta que calendar.js lo activa -->
+      <div class="calendario__contenido" hidden>
+
+        <div class="calendario__encabezado">
+          <button type="button" class="calendario__boton calendario__boton--anterior" aria-label="Mes anterior">&#8249;</button>
+          <h3 class="calendario__titulo-mes" aria-live="polite">
+            <span class="calendario__nombre-mes"></span>
+            <span class="calendario__anio"></span>
+          </h3>
+          <button type="button" class="calendario__boton calendario__boton--siguiente" aria-label="Mes siguiente">&#8250;</button>
+          <button type="button" class="calendario__boton-hoy">Ir al mes actual</button>
+        </div>
+
+        <table class="calendario__tabla">
+          <caption class="sr-only"></caption>
+          <thead>
+            <tr>
+              <th scope="col"><abbr title="Lunes">Lun</abbr></th>
+              <th scope="col"><abbr title="Martes">Mar</abbr></th>
+              <th scope="col"><abbr title="Miércoles">Mié</abbr></th>
+              <th scope="col"><abbr title="Jueves">Jue</abbr></th>
+              <th scope="col"><abbr title="Viernes">Vie</abbr></th>
+              <th scope="col"><abbr title="Sábado">Sáb</abbr></th>
+              <th scope="col"><abbr title="Domingo">Dom</abbr></th>
+            </tr>
+          </thead>
+          <!-- Las semanas del mes las genera calendar.js -->
+          <tbody class="calendario__dias"></tbody>
+        </table>
+
+        <div class="calendario__notas">
+          <div class="calendario__caja">
+            <h4 class="calendario__caja-titulo">Notas</h4>
+            <p>Las actividades marcadas como «Ejemplo» son de demostración. Pasa el cursor o el foco del teclado por un día marcado para resaltar su actividad.</p>
+          </div>
+          <div class="calendario__caja">
+            <h4 class="calendario__caja-titulo">Actividades del mes</h4>
+            <ul class="calendario__actividades"></ul>
+            <p class="calendario__sin-actividades">No hay actividades publicadas para este mes.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+
+      <div class="footer__institucion">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="footer__escudo">
+        <p class="footer__nombre">Institución Educativa San Antonio de Padua</p>
+        <!-- Redes sociales: Facebook enlaza a la página oficial; las demás se muestran como texto porque sus enlaces siguen pendientes -->
+        <ul class="footer__redes">
+          <li><a href="https://www.facebook.com/ColegioSanAntonioDePaduaTimbio" class="footer__red-social footer__red-social--enlace" target="_blank" rel="noopener noreferrer">Facebook<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li><span class="footer__red-social">Instagram</span></li>
+          <li><span class="footer__red-social">LinkedIn</span></li>
+          <li><span class="footer__red-social">YouTube</span></li>
+        </ul>
+      </div>
+
+      <div class="footer__enlaces">
+        <h3 class="footer__titulo">Enlaces rápidos</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="servicios-academicos.html">Servicios</a></li>
+          <li><a href="nosotros-institucion.html">Nosotros</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="admisiones.html">Admisiones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contacto">
+        <h3 class="footer__titulo">Contacto</h3>
+        <ul>
+          <!-- Canales de contacto entregados por la institución (WhatsApp y correo) -->
+          <li>WhatsApp: <a href="https://wa.me/573105397139" target="_blank" rel="noopener noreferrer">310 539 7139<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li>Correo: <a href="mailto:colegiosanantoniodep@gmail.com">colegiosanantoniodep@gmail.com</a></li>
+          <li>Ubicación: Timbío, Cauca</li>
+        </ul>
+      </div>
+
+      <div class="footer__ubicacion">
+        <h3 class="footer__titulo">Ubicación</h3>
+        <!-- Dirección entregada por la institución y búsqueda de esa dirección en Google Maps (sin coordenadas ni mapa incrustado) -->
+        <div class="footer__ubicacion-pendiente">
+          <p class="footer__ubicacion-lugar">Calle 15 No. 14-89, Barrio Belén, Timbío, Cauca, Colombia</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2015%20No.%2014-89%2C%20Barrio%20Bel%C3%A9n%2C%20Timb%C3%ADo%2C%20Cauca%2C%20Colombia" class="footer__mapa" target="_blank" rel="noopener noreferrer">Ver en Google Maps<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__linea-inferior">
+      <p>&copy; 2026 Institución Educativa San Antonio de Padua. Todos los derechos reservados.</p>
+      <!-- Documentos legales: se muestran como texto porque los textos oficiales siguen pendientes -->
+      <ul class="footer__legal">
+        <li><span>Política de Privacidad</span></li>
+        <li><span>Términos y Condiciones</span></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/calendar.js"></script>
+</body>
+</html>

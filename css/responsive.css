@@ -1,0 +1,567 @@
+/* Ajustes para tablet: la navegación se envuelve si no cabe en una sola línea */
+@media (max-width: 768px) {
+  .header__contenedor {
+    flex-wrap: wrap;
+  }
+
+  .nav__lista {
+    flex-wrap: wrap;
+    gap: var(--espacio-sm);
+  }
+
+  .footer__contenedor {
+    gap: var(--espacio-md);
+  }
+
+  /* Conoce nuestra institución: de 4 a 2 columnas */
+  .accesos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Estadísticas: de 5 a 2 columnas; el último elemento ocupa ambas y queda centrado */
+  .estadisticas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .estadisticas__item:last-child {
+    grid-column: 1 / -1;
+  }
+
+  /* Noticias y Eventos: las tarjetas pequeñas pasan a 2 columnas */
+  .noticias-eventos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Imagen destacada de Noticias y Eventos: un poco más baja en tablet */
+  .tarjeta__imagen--destacada {
+    height: 240px;
+  }
+
+  /* Sobre Nosotros: imagen arriba y texto debajo desde tablet */
+  .sobre-nosotros {
+    flex-direction: column;
+  }
+
+  /* Evita que "flex: 1" (pensado para fila) colapse la altura del placeholder en columna */
+  .sobre-nosotros__imagen-placeholder {
+    flex: none;
+    width: 100%;
+    height: 180px;
+  }
+
+  /* Misión y Visión: apiladas verticalmente desde tablet, ocupando todo el ancho */
+  .mision-vision {
+    flex-direction: column;
+  }
+
+  .mision-vision__bloque {
+    width: 100%;
+  }
+
+  /* Escudo y Bandera: imagen arriba y texto debajo desde tablet */
+  .simbolo {
+    flex-direction: column;
+  }
+
+  /* Evita que "flex: 1" (pensado para fila) colapse la altura del placeholder en columna */
+  .simbolo__imagen-placeholder,
+  .simbolo__imagen {
+    flex: none;
+    width: 100%;
+    height: 180px;
+  }
+
+  /* Más aire a los lados de estas secciones, que quedaban muy pegadas al borde */
+  .mision-vision,
+  .rectoria,
+  .uniformes,
+  .simbolo,
+  .himno,
+  .documento-seccion,
+  .documentos-lista,
+  .hitos-historicos,
+  .historia {
+    padding-left: var(--espacio-lg);
+    padding-right: var(--espacio-lg);
+  }
+
+  /* Documentación institucional: de 3 a 2 columnas */
+  .documentos-lista__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* La tercera tarjeta ocupa la segunda fila, centrada y con el ancho de una columna */
+  .documentos-lista__grid .tarjeta:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - var(--espacio-md) / 2);
+  }
+
+  /* Hitos históricos: de 3 a 2 columnas */
+  .hitos-historicos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Carrusel de hitos: 2 tarjetas visibles en tablet */
+  .carrusel--hitos {
+    --carrusel-visibles: 2;
+  }
+
+  /* Recorrido 360°: las cuatro tarjetas de espacios pasan a 2 columnas */
+  .recorrido360__espacios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Laboratorios y su galería de detalle: de 3 a 2 columnas */
+  .laboratorios__grid,
+  .laboratorio-detalle__galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Navegación secundaria: mismo margen lateral que el contenido de estas páginas */
+  .navegacion-seccion {
+    padding-left: var(--espacio-lg);
+    padding-right: var(--espacio-lg);
+  }
+
+  /* Más aire a los lados de Campus, que quedaba muy pegado al borde */
+  .recorrido360,
+  .laboratorios,
+  .laboratorio-detalle {
+    padding-left: var(--espacio-lg);
+    padding-right: var(--espacio-lg);
+  }
+
+  /* Oferta Académica: de 3 a 2 columnas */
+  .oferta-academica__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Materias: de 3 a 2 columnas */
+  .materias__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* La tercera tarjeta ocupa la segunda fila, centrada y con el ancho de una columna */
+  .materias__grid .tarjeta:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - var(--espacio-md) / 2);
+  }
+
+  /* Más aire a los lados de Servicios Académicos */
+  .oferta-academica,
+  .materias,
+  .plataforma-notas,
+  .agenda-escolar {
+    padding-left: var(--espacio-lg);
+    padding-right: var(--espacio-lg);
+  }
+
+  /* Banda Marcial: imagen arriba, título debajo desde tablet */
+  .actividad-destacada {
+    flex-direction: column;
+  }
+
+  /* Evita que "flex: 1" (pensado para fila) colapse la altura del placeholder en columna */
+  .actividad-destacada__imagen-placeholder {
+    flex: none;
+    width: 100%;
+    height: 180px;
+  }
+
+  .actividad-destacada__imagen {
+    flex: none;
+    width: 100%;
+  }
+
+  /* Actividades: de 4 a 2 columnas */
+  .actividades__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Más aire a los lados de Servicios Extracurriculares */
+  .actividad-destacada,
+  .actividades,
+  .emisora {
+    padding-left: var(--espacio-lg);
+    padding-right: var(--espacio-lg);
+  }
+
+  /* Información Importante: de 3 a 2 columnas */
+  .informacion-importante__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* La tercera tarjeta ocupa la segunda fila, centrada y con el ancho de una columna */
+  .informacion-importante__grid .tarjeta:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - var(--espacio-md) / 2);
+  }
+
+  /* Más aire a los lados de Noticias e Información Importante */
+  .informacion-importante,
+  .calendario {
+    padding-left: var(--espacio-lg);
+    padding-right: var(--espacio-lg);
+  }
+
+  /* Calendario: una sola columna, con el mes y sus botones arriba de la tabla */
+  .calendario__contenido {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "encabezado"
+      "tabla"
+      "notas";
+  }
+
+  /* Detalle de noticia: mismo margen lateral que Noticias */
+  .detalle-noticias {
+    padding-left: var(--espacio-lg);
+    padding-right: var(--espacio-lg);
+  }
+
+  /* Detalle de noticia: fotografía arriba y texto debajo */
+  .detalle-noticia__contenido {
+    grid-template-columns: 1fr;
+    gap: var(--espacio-md);
+  }
+
+  /* Admisiones: bloque introductorio en columna, imagen arriba y texto debajo */
+  .admisiones-intro {
+    flex-direction: column;
+  }
+
+  /* La pieza gráfica (o el botón del visor que la contiene) pasa a ocupar todo el ancho, arriba del texto */
+  .admisiones-intro__imagen,
+  .admisiones-intro .visor-abrir {
+    flex: none;
+    width: 100%;
+  }
+
+  /* Proceso de Admisión: de 3 a 2 columnas */
+  .proceso-admision__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Más aire a los lados de Admisiones */
+  .admisiones-intro,
+  .proceso-admision,
+  .requisitos,
+  .admisiones-cta {
+    padding-left: var(--espacio-lg);
+    padding-right: var(--espacio-lg);
+  }
+
+  /* Información de contacto: de 3 a 2 columnas */
+  .contacto-info__lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Más aire a los lados de Contacto */
+  .contacto-titulo,
+  .contacto-info {
+    padding-left: var(--espacio-lg);
+    padding-right: var(--espacio-lg);
+  }
+}
+
+/* Ajustes para móvil: header, navegación y footer se apilan verticalmente */
+@media (max-width: 480px) {
+  .header__contenedor {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Recorrido 360° en móvil: panorama un poco más bajo para que quede espacio
+     por encima y por debajo para desplazar la página con el dedo */
+  .recorrido360__escena {
+    height: 60vh;
+  }
+
+  .recorrido360__nombre {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .recorrido360__ayuda {
+    bottom: 4.25rem;
+    font-size: 0.8rem;
+  }
+
+  /* Visor de fotografías en móvil: la imagen usa todo el ancho y las flechas bajan
+     junto a la leyenda para no tapar la fotografía */
+  .visor {
+    padding: 4.5rem var(--espacio-sm) 5.5rem;
+  }
+
+  .visor__flecha {
+    top: auto;
+    bottom: var(--espacio-md);
+    transform: none;
+  }
+
+  /* Banda de estadísticas: bloques más angostos y una vuelta más corta,
+     para conservar una velocidad parecida a la de escritorio */
+  .estadisticas__pista {
+    animation-duration: 36s;
+  }
+
+  .estadisticas__pista .estadisticas__item {
+    flex-basis: 12rem;
+  }
+
+  /* Portada: fotografía más alta, flechas y leyenda más pequeñas en móvil */
+  .portada__imagen {
+    aspect-ratio: 3 / 2;
+  }
+
+  .portada__flecha {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.6rem;
+  }
+
+  .portada__flecha--anterior {
+    left: var(--espacio-sm);
+  }
+
+  .portada__flecha--siguiente {
+    right: var(--espacio-sm);
+  }
+
+  .portada__leyenda {
+    left: var(--espacio-sm);
+    bottom: var(--espacio-sm);
+    font-size: 0.85rem;
+  }
+
+  .nav__lista {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .boton--primario {
+    width: 100%;
+  }
+
+  /* Menú móvil: estas reglas solo aplican si main.js añadió .header--con-menu,
+     así sin JavaScript la navegación apilada sigue visible */
+  .header--con-menu .header__contenedor {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .header--con-menu .header__logo {
+    flex: 1;
+  }
+
+  .header--con-menu .header__menu-boton {
+    display: block;
+  }
+
+  /* Menú cerrado: se ocultan la navegación y el botón Contáctanos */
+  .header--con-menu .nav,
+  .header--con-menu .header__contenedor > .boton {
+    display: none;
+  }
+
+  /* Menú abierto: navegación y Contáctanos ocupan todo el ancho, debajo */
+  .header--menu-abierto .nav,
+  .header--menu-abierto .header__contenedor > .boton {
+    display: block;
+    width: 100%;
+  }
+
+  .footer__contenedor {
+    flex-direction: column;
+  }
+
+  .footer__institucion,
+  .footer__enlaces,
+  .footer__contacto,
+  .footer__ubicacion {
+    min-width: 100%;
+  }
+
+  .footer__linea-inferior {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__escudo,
+  .footer__escudo {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Banner provisional de franja: menos alto y con texto más pequeño en móvil */
+  .banner--franja {
+    padding-top: var(--espacio-lg);
+    padding-bottom: var(--espacio-lg);
+  }
+
+  .banner__franja-texto {
+    font-size: 1.6rem;
+  }
+
+  /* Sobre Nosotros: reduce un poco más la altura del placeholder en móvil */
+  .sobre-nosotros__imagen-placeholder {
+    height: 160px;
+  }
+
+  /* Conoce nuestra institución: una sola columna */
+  .accesos__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Noticias y Eventos: una sola columna */
+  .noticias-eventos__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Imagen destacada de Noticias y Eventos: altura reducida en móvil */
+  .tarjeta__imagen--destacada {
+    height: 180px;
+  }
+
+  /* Misión y Visión: una sola columna */
+  .mision-vision {
+    flex-direction: column;
+  }
+
+  /* Uniformes: una sola columna */
+  .uniformes__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Escudo y Bandera: imagen y texto se apilan */
+  .simbolo {
+    flex-direction: column;
+  }
+
+  .simbolo__imagen-placeholder,
+  .simbolo__imagen {
+    height: 160px;
+  }
+
+  /* Himno: reduce un poco el espaciado vertical en pantallas pequeñas */
+  .himno {
+    padding: var(--espacio-md) 0;
+  }
+
+  /* Materias: una sola columna a ancho completo */
+  .materias__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .materias__grid .tarjeta:last-child {
+    width: auto;
+    justify-self: stretch;
+  }
+
+  /* Documentación institucional: una sola columna a ancho completo */
+  .documentos-lista__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .documentos-lista__grid .tarjeta:last-child {
+    width: auto;
+    justify-self: stretch;
+  }
+
+  /* Hitos históricos: una sola columna, cada tarjeta ocupa el ancho disponible */
+  .hitos-historicos__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Carrusel de hitos: 1 tarjeta visible en móvil */
+  .carrusel--hitos {
+    --carrusel-visibles: 1;
+  }
+
+  /* Laboratorios y su galería de detalle: una sola columna */
+  .laboratorios__grid,
+  .laboratorio-detalle__galeria {
+    grid-template-columns: 1fr;
+  }
+
+  /* Recorrido 360°: reduce la altura del placeholder */
+  .recorrido360__visor-placeholder {
+    height: 180px;
+  }
+
+  /* Oferta Académica: una sola columna */
+  .oferta-academica__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Banda Marcial: reduce un poco más la altura del placeholder en móvil */
+  .actividad-destacada__imagen-placeholder {
+    height: 160px;
+  }
+
+  /* Actividades: una sola columna, cada tarjeta ocupa el ancho disponible */
+  .actividades__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Emisora: reduce la altura del placeholder */
+  .emisora__visor-placeholder {
+    height: 160px;
+  }
+
+  /* Información Importante: una sola columna */
+  .informacion-importante__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* En móvil la tercera tarjeta vuelve al ancho completo */
+  .informacion-importante__grid .tarjeta:last-child {
+    width: auto;
+    justify-self: stretch;
+  }
+
+  /* Calendario: conserva 7 columnas, pero con celdas más compactas */
+  .calendario__tabla th,
+  .calendario__dia {
+    padding: calc(var(--espacio-sm) / 2) 0;
+  }
+
+  .calendario__dia {
+    height: 44px;
+    text-align: center;
+  }
+
+  .calendario__numero {
+    min-width: 1.6rem;
+    font-size: 0.9rem;
+  }
+
+  /* Punto de los días con actividad: centrado y más pequeño, para no cambiar la altura de la celda */
+  .calendario__dia--actividad::after {
+    width: 0.35rem;
+    height: 0.35rem;
+    margin: 0.1rem auto 0;
+  }
+
+  .calendario__nombre-mes {
+    font-size: 1.6rem;
+  }
+
+  .calendario__anio {
+    font-size: 1.3rem;
+  }
+
+  /* Proceso de Admisión: una sola columna, tarjetas una debajo de otra */
+  .proceso-admision__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Información de contacto: una sola columna */
+  .contacto-info__lista {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,80 @@
+/* Variables generales del sitio (colores, espacios y tamaños provisionales, */
+/* pendientes de confirmar con la paleta oficial de la institución) */
+:root {
+  --color-texto: #1f2937;
+  --color-texto-claro: #ffffff;
+  --color-fondo: #ffffff;
+  --color-fondo-alterno: #f3f4f6;
+  --color-primario: #1d4ed8;
+  --color-primario-oscuro: #1e3a8a;
+
+  --espacio-sm: 0.5rem;
+  --espacio-md: 1rem;
+  --espacio-lg: 2rem;
+
+  --fuente-base: "Segoe UI", Arial, sans-serif;
+  --ancho-maximo: 1200px;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-base);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Permite que el contenido crezca y empuje el footer hacia abajo en páginas cortas */
+.contenido-principal {
+  flex: 1;
+}
+
+/* Contenedor genérico para limitar el ancho del contenido */
+.contenedor {
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: 0 var(--espacio-md);
+}
+
+/* Tipografía base */
+h1, h2, h3 {
+  color: var(--color-texto);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: var(--espacio-md);
+}
+
+/* Enlaces */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  display: block;
+}

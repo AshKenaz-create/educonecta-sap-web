@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios Extracurriculares - Institución Educativa San Antonio de Padua</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="../index.html" class="header__logo">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="header__escudo">
+        <span class="header__nombre">Institución Educativa San Antonio de Padua</span>
+      </a>
+
+      <!-- Botón del menú móvil: solo visible en pantallas pequeñas -->
+      <button type="button" class="header__menu-boton" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a href="../index.html" class="nav__enlace">Inicio</a></li>
+          <li><a href="servicios-academicos.html" class="nav__enlace">Servicios</a></li>
+          <li><a href="nosotros-institucion.html" class="nav__enlace">Nosotros</a></li>
+          <li><a href="noticias.html" class="nav__enlace">Noticias</a></li>
+          <li><a href="admisiones.html" class="nav__enlace">Admisiones</a></li>
+        </ul>
+      </nav>
+
+      <a href="contacto.html" class="boton boton--primario">Contáctanos</a>
+    </div>
+  </header>
+
+  <main class="contenido-principal">
+
+    <!-- Banner de sección -->
+    <section class="banner">
+      <img src="../assets/images/servicios/banner-extracurriculares.jpg" alt="Pieza gráfica de actividades y eventos de la institución" class="banner__imagen">
+      <div class="banner__contenido">
+        <h1>Mucho más que un espacio de estudio</h1>
+      </div>
+    </section>
+
+    <!-- Navegación entre las páginas de la sección Servicios -->
+    <nav class="navegacion-seccion contenedor" aria-label="Navegación de Servicios">
+      <ul class="navegacion-seccion__lista">
+        <li><a href="servicios-academicos.html" class="navegacion-seccion__enlace">Académicos</a></li>
+        <li><a href="servicios-extracurriculares.html" class="navegacion-seccion__enlace navegacion-seccion__enlace--activo" aria-current="page">Extracurriculares</a></li>
+      </ul>
+    </nav>
+
+    <!--
+      Los nombres de Banda Marcial y de las 8 actividades siguientes están
+      respaldados por el wireframe y por los recursos compartidos del equipo
+      ("Fotos SAP"), que confirman que estas actividades existen. Las
+      imágenes y cualquier contenido descriptivo (responsables, horarios,
+      fechas, objetivos) siguen pendientes de clasificación y confirmación
+      del equipo audiovisual/institucional.
+    -->
+
+    <!-- Banda Marcial: actividad destacada, solo nombre, sin descripción -->
+    <section class="actividad-destacada contenedor">
+      <img src="../assets/images/extracurriculares/banda-marcial.jpg" alt="Estudiantes de la Banda Marcial de la Institución Educativa San Antonio de Padua" class="actividad-destacada__imagen">
+      <div class="actividad-destacada__texto">
+        <h2>Banda Marcial</h2>
+      </div>
+    </section>
+
+    <!-- Actividades: solo nombre por tarjeta; las fotografías se pueden ampliar en el visor (visor-fotos.js) -->
+    <section class="actividades contenedor">
+      <h2>Actividades</h2>
+      <div class="actividades__grid">
+        <article class="tarjeta tarjeta--circulo">
+          <img src="../assets/images/extracurriculares/brigada-rescate.jpg" alt="Estudiantes en actividad de Brigada de Rescate" class="tarjeta__imagen tarjeta__imagen--arriba">
+          <h3 class="tarjeta__titulo"><span class="circulo">Brigada de Rescate</span></h3>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <img src="../assets/images/extracurriculares/ecofest.jpg" alt="Estudiantes participando en Ecofest" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">Ecofest</span></h3>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <img src="../assets/images/extracurriculares/educacion-financiera.jpg" alt="Actividad de Educación Financiera" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">Educación Financiera</span></h3>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <img src="../assets/images/extracurriculares/grupo-musical.jpg" alt="Grupo Musical de la institución" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">Grupo Musical</span></h3>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <img src="../assets/images/extracurriculares/mercado-campesino.jpg" alt="Estudiantes en el Mercado Campesino" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">Mercado Campesino</span></h3>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <img src="../assets/images/extracurriculares/patrulla-vial-escolar.jpg" alt="Patrulla Vial Escolar" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">Patrulla Vial Escolar</span></h3>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <img src="../assets/images/extracurriculares/tecnisena.jpg" alt="Actividad de TecniSena" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">TecniSena</span></h3>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <img src="../assets/images/extracurriculares/tecnologia.jpg" alt="Estudiantes en actividad de Tecnología" class="tarjeta__imagen">
+          <h3 class="tarjeta__titulo"><span class="circulo">Tecnología</span></h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- Emisora Institucional: el banner es apoyo visual; «Sintonizar» abre la página de la emisora (sitio externo) -->
+    <section class="emisora contenedor">
+      <h2>Emisora Institucional</h2>
+      <img src="../assets/images/servicios/emisora-banner.jpg" alt="Banner gráfico de la emisora institucional" class="emisora__imagen">
+      <a href="https://www.paduatimbioestereo.net" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Sintonizar<span class="sr-only"> (abre la página de la emisora en una pestaña nueva)</span></a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+
+      <div class="footer__institucion">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="footer__escudo">
+        <p class="footer__nombre">Institución Educativa San Antonio de Padua</p>
+        <!-- Redes sociales: Facebook enlaza a la página oficial; las demás se muestran como texto porque sus enlaces siguen pendientes -->
+        <ul class="footer__redes">
+          <li><a href="https://www.facebook.com/ColegioSanAntonioDePaduaTimbio" class="footer__red-social footer__red-social--enlace" target="_blank" rel="noopener noreferrer">Facebook<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li><span class="footer__red-social">Instagram</span></li>
+          <li><span class="footer__red-social">LinkedIn</span></li>
+          <li><span class="footer__red-social">YouTube</span></li>
+        </ul>
+      </div>
+
+      <div class="footer__enlaces">
+        <h3 class="footer__titulo">Enlaces rápidos</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="servicios-academicos.html">Servicios</a></li>
+          <li><a href="nosotros-institucion.html">Nosotros</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="admisiones.html">Admisiones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contacto">
+        <h3 class="footer__titulo">Contacto</h3>
+        <ul>
+          <!-- Canales de contacto entregados por la institución (WhatsApp y correo) -->
+          <li>WhatsApp: <a href="https://wa.me/573105397139" target="_blank" rel="noopener noreferrer">310 539 7139<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li>Correo: <a href="mailto:colegiosanantoniodep@gmail.com">colegiosanantoniodep@gmail.com</a></li>
+          <li>Ubicación: Timbío, Cauca</li>
+        </ul>
+      </div>
+
+      <div class="footer__ubicacion">
+        <h3 class="footer__titulo">Ubicación</h3>
+        <!-- Dirección entregada por la institución y búsqueda de esa dirección en Google Maps (sin coordenadas ni mapa incrustado) -->
+        <div class="footer__ubicacion-pendiente">
+          <p class="footer__ubicacion-lugar">Calle 15 No. 14-89, Barrio Belén, Timbío, Cauca, Colombia</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2015%20No.%2014-89%2C%20Barrio%20Bel%C3%A9n%2C%20Timb%C3%ADo%2C%20Cauca%2C%20Colombia" class="footer__mapa" target="_blank" rel="noopener noreferrer">Ver en Google Maps<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__linea-inferior">
+      <p>&copy; 2026 Institución Educativa San Antonio de Padua. Todos los derechos reservados.</p>
+      <!-- Documentos legales: se muestran como texto porque los textos oficiales siguen pendientes -->
+      <ul class="footer__legal">
+        <li><span>Política de Privacidad</span></li>
+        <li><span>Términos y Condiciones</span></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/visor-fotos.js"></script>
+</body>
+</html>

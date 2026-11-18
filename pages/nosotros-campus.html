@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus - Institución Educativa San Antonio de Padua</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="../index.html" class="header__logo">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="header__escudo">
+        <span class="header__nombre">Institución Educativa San Antonio de Padua</span>
+      </a>
+
+      <!-- Botón del menú móvil: solo visible en pantallas pequeñas -->
+      <button type="button" class="header__menu-boton" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a href="../index.html" class="nav__enlace">Inicio</a></li>
+          <li><a href="servicios-academicos.html" class="nav__enlace">Servicios</a></li>
+          <li><a href="nosotros-institucion.html" class="nav__enlace">Nosotros</a></li>
+          <li><a href="noticias.html" class="nav__enlace">Noticias</a></li>
+          <li><a href="admisiones.html" class="nav__enlace">Admisiones</a></li>
+        </ul>
+      </nav>
+
+      <a href="contacto.html" class="boton boton--primario">Contáctanos</a>
+    </div>
+  </header>
+
+  <main class="contenido-principal">
+
+    <!-- Banner de sección -->
+    <section class="banner">
+      <img src="../assets/images/campus/fachada-nueva.jpg" alt="Fachada actual de la Institución Educativa San Antonio de Padua" class="banner__imagen">
+      <div class="banner__contenido">
+        <h1>Campus</h1>
+      </div>
+    </section>
+
+    <!-- Navegación entre las páginas de la sección Nosotros -->
+    <nav class="navegacion-seccion contenedor" aria-label="Navegación de Nosotros">
+      <ul class="navegacion-seccion__lista">
+        <li><a href="nosotros-institucion.html" class="navegacion-seccion__enlace">Institución</a></li>
+        <li><a href="nosotros-historia.html" class="navegacion-seccion__enlace">Historia</a></li>
+        <li><a href="nosotros-campus.html" class="navegacion-seccion__enlace navegacion-seccion__enlace--activo" aria-current="page">Campus</a></li>
+      </ul>
+    </nav>
+
+    <!--
+      Recorrido 360°: cuatro fotoesferas reales convertidas en las seis caras de
+      un cubo (recorrido360.js). Cada espacio se carga solo cuando se elige.
+      Los nombres de los espacios son provisionales hasta que el equipo confirme
+      las denominaciones oficiales.
+    -->
+    <section class="recorrido360 contenedor" aria-labelledby="titulo-recorrido360">
+      <h2 id="titulo-recorrido360">Recorrido 360°</h2>
+
+      <!-- Sin JavaScript se ve la pieza gráfica y este aviso -->
+      <p class="aviso recorrido360__sin-js">El recorrido virtual 360° necesita JavaScript activado en el navegador.</p>
+
+      <p class="recorrido360__intro" hidden>Elige un espacio y explóralo en todas las direcciones.</p>
+
+      <!-- Espacios disponibles: se muestran cuando recorrido360.js está activo -->
+      <ul class="recorrido360__espacios" hidden>
+        <li>
+          <button type="button" class="recorrido360__espacio" data-espacio="entrada" data-inicio="0" aria-pressed="false">
+            <img src="../assets/images/campus/recorrido-360/entrada/miniatura.jpg" alt="" class="recorrido360__miniatura">
+            <span class="recorrido360__nombre">Entrada principal</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="recorrido360__espacio" data-espacio="patio" data-inicio="0" aria-pressed="false">
+            <img src="../assets/images/campus/recorrido-360/patio/miniatura.jpg" alt="" class="recorrido360__miniatura">
+            <span class="recorrido360__nombre">Patio central</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="recorrido360__espacio" data-espacio="tecnologia" data-inicio="-40" aria-pressed="false">
+            <img src="../assets/images/campus/recorrido-360/tecnologia/miniatura.jpg" alt="" class="recorrido360__miniatura">
+            <span class="recorrido360__nombre">Espacio de tecnología</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="recorrido360__espacio" data-espacio="recreativa" data-inicio="-65" aria-pressed="false">
+            <img src="../assets/images/campus/recorrido-360/recreativa/miniatura.jpg" alt="" class="recorrido360__miniatura">
+            <span class="recorrido360__nombre">Zona recreativa</span>
+          </button>
+        </li>
+      </ul>
+
+      <div class="recorrido360__visor">
+        <!-- Portada: la pieza gráfica se ve hasta que se elige un espacio -->
+        <img src="../assets/images/campus/recorrido-360.jpg" alt="Pieza gráfica del Recorrido 360° por las instalaciones de la institución" class="imagen-apoyo recorrido360__portada">
+
+        <!-- Panorama: la cámara está en el centro de un cubo formado por seis fotografías -->
+        <div class="recorrido360__escena" tabindex="0" role="application" aria-roledescription="visor panorámico"
+             aria-label="Vista panorámica de 360 grados" aria-describedby="recorrido360-ayuda" hidden>
+          <div class="recorrido360__cubo">
+            <div class="recorrido360__cara recorrido360__cara--frente"></div>
+            <div class="recorrido360__cara recorrido360__cara--derecha"></div>
+            <div class="recorrido360__cara recorrido360__cara--atras"></div>
+            <div class="recorrido360__cara recorrido360__cara--izquierda"></div>
+            <div class="recorrido360__cara recorrido360__cara--arriba"></div>
+            <div class="recorrido360__cara recorrido360__cara--abajo"></div>
+          </div>
+          <p class="recorrido360__ayuda" id="recorrido360-ayuda"></p>
+          <p class="recorrido360__estado" role="status" hidden></p>
+          <div class="recorrido360__controles">
+            <button type="button" class="recorrido360__boton recorrido360__boton--inicio">Vista inicial</button>
+            <button type="button" class="recorrido360__boton recorrido360__boton--completa" hidden>Pantalla completa</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!--
+      Laboratorios: el wireframe muestra 3 tarjetas, pero esa cantidad es solo
+      una decisión de estructura visual del wireframe, no un dato institucional
+      confirmado. No hay nombres, especialidades ni cantidad real de
+      laboratorios respaldados por informacion-sap.pdf ni otra fuente.
+      La pieza gráfica es un apoyo visual general de la sección: no es la
+      fotografía de un laboratorio específico y su texto no está validado.
+      Las tres tarjetas muestran fotografías reales entregadas por el equipo:
+      son vistas del laboratorio fotografiado, no tres laboratorios confirmados.
+    -->
+    <section class="laboratorios contenedor">
+      <h2>Laboratorios</h2>
+      <img src="../assets/images/campus/laboratorios.jpg" alt="Pieza gráfica ilustrativa de la sección Laboratorios" class="imagen-apoyo">
+      <p>Conoce algunos de los espacios destinados al aprendizaje práctico y experimental de nuestros estudiantes.</p>
+      <div class="laboratorios__grid">
+        <article class="tarjeta tarjeta--circulo">
+          <img src="../assets/images/campus/laboratorio/laboratorio-vista-1.jpg" alt="Vista general del laboratorio de la Institución Educativa San Antonio de Padua, con mesas de trabajo y mesón lateral" class="tarjeta__imagen tarjeta__imagen--proporcional">
+          <h3 class="tarjeta__titulo"><span class="circulo">Espacio de prácticas científicas</span></h3>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <img src="../assets/images/campus/laboratorio/laboratorio-vista-2.jpg" alt="Vista del laboratorio de la Institución Educativa San Antonio de Padua, con mesas de trabajo y ventanas al fondo" class="tarjeta__imagen tarjeta__imagen--proporcional">
+          <h3 class="tarjeta__titulo"><span class="circulo">Área de trabajo experimental</span></h3>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <img src="../assets/images/campus/laboratorio/laboratorio-vista-3.jpg" alt="Vista del laboratorio de la Institución Educativa San Antonio de Padua, con mesas de trabajo y tablero" class="tarjeta__imagen tarjeta__imagen--proporcional">
+          <h3 class="tarjeta__titulo"><span class="circulo">Ambiente para el aprendizaje de las ciencias</span></h3>
+        </article>
+      </div>
+    </section>
+
+    <!--
+      Detalle de laboratorio: la galería usa fotografías reales del equipo; el
+      título y la descripción son textos generales, sin datos institucionales
+      confirmados. Como en el wireframe, la galería es un carrusel (carousel.js)
+      que muestra una imagen a la vez. Sin JavaScript se ve como cuadrícula.
+    -->
+    <section class="laboratorio-detalle contenedor">
+      <h2 id="titulo-laboratorio-detalle">Laboratorio de ciencias</h2>
+      <div class="carrusel carrusel--laboratorio" role="region" aria-roledescription="carrusel" aria-labelledby="titulo-laboratorio-detalle">
+        <button type="button" class="carrusel__boton carrusel__boton--anterior" aria-label="Ver imagen anterior" hidden><span aria-hidden="true">&#9665;</span></button>
+        <div class="carrusel__ventana">
+          <div class="carrusel__pista laboratorio-detalle__galeria">
+            <img src="../assets/images/campus/laboratorio/laboratorio-detalle-1.jpg" alt="Vitrinas con material de vidrio en el laboratorio de la Institución Educativa San Antonio de Padua" class="tarjeta__imagen tarjeta__imagen--proporcional">
+            <img src="../assets/images/campus/laboratorio/laboratorio-detalle-2.jpg" alt="Estantería con recipientes de vidrio en el laboratorio de la Institución Educativa San Antonio de Padua" class="tarjeta__imagen tarjeta__imagen--proporcional">
+            <img src="../assets/images/campus/laboratorio/laboratorio-detalle-3.jpg" alt="Modelos anatómicos y muebles de almacenamiento en el laboratorio de la Institución Educativa San Antonio de Padua" class="tarjeta__imagen tarjeta__imagen--proporcional">
+          </div>
+        </div>
+        <button type="button" class="carrusel__boton carrusel__boton--siguiente" aria-label="Ver imagen siguiente" hidden><span aria-hidden="true">&#9655;</span></button>
+        <p class="carrusel__estado sr-only" aria-live="polite"></p>
+      </div>
+      <p>Espacio destinado al desarrollo de prácticas académicas y actividades experimentales, con mesas de trabajo, material de laboratorio, recursos didácticos y modelos anatómicos que apoyan el aprendizaje práctico y la comprensión de las ciencias.</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+
+      <div class="footer__institucion">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="footer__escudo">
+        <p class="footer__nombre">Institución Educativa San Antonio de Padua</p>
+        <!-- Redes sociales: Facebook enlaza a la página oficial; las demás se muestran como texto porque sus enlaces siguen pendientes -->
+        <ul class="footer__redes">
+          <li><a href="https://www.facebook.com/ColegioSanAntonioDePaduaTimbio" class="footer__red-social footer__red-social--enlace" target="_blank" rel="noopener noreferrer">Facebook<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li><span class="footer__red-social">Instagram</span></li>
+          <li><span class="footer__red-social">LinkedIn</span></li>
+          <li><span class="footer__red-social">YouTube</span></li>
+        </ul>
+      </div>
+
+      <div class="footer__enlaces">
+        <h3 class="footer__titulo">Enlaces rápidos</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="servicios-academicos.html">Servicios</a></li>
+          <li><a href="nosotros-institucion.html">Nosotros</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="admisiones.html">Admisiones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contacto">
+        <h3 class="footer__titulo">Contacto</h3>
+        <ul>
+          <!-- Canales de contacto entregados por la institución (WhatsApp y correo) -->
+          <li>WhatsApp: <a href="https://wa.me/573105397139" target="_blank" rel="noopener noreferrer">310 539 7139<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li>Correo: <a href="mailto:colegiosanantoniodep@gmail.com">colegiosanantoniodep@gmail.com</a></li>
+          <li>Ubicación: Timbío, Cauca</li>
+        </ul>
+      </div>
+
+      <div class="footer__ubicacion">
+        <h3 class="footer__titulo">Ubicación</h3>
+        <!-- Dirección entregada por la institución y búsqueda de esa dirección en Google Maps (sin coordenadas ni mapa incrustado) -->
+        <div class="footer__ubicacion-pendiente">
+          <p class="footer__ubicacion-lugar">Calle 15 No. 14-89, Barrio Belén, Timbío, Cauca, Colombia</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2015%20No.%2014-89%2C%20Barrio%20Bel%C3%A9n%2C%20Timb%C3%ADo%2C%20Cauca%2C%20Colombia" class="footer__mapa" target="_blank" rel="noopener noreferrer">Ver en Google Maps<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__linea-inferior">
+      <p>&copy; 2026 Institución Educativa San Antonio de Padua. Todos los derechos reservados.</p>
+      <!-- Documentos legales: se muestran como texto porque los textos oficiales siguen pendientes -->
+      <ul class="footer__legal">
+        <li><span>Política de Privacidad</span></li>
+        <li><span>Términos y Condiciones</span></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/carousel.js"></script>
+  <script src="../js/visor-fotos.js"></script>
+  <script src="../js/recorrido360.js"></script>
+</body>
+</html>

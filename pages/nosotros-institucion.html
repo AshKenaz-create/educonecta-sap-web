@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - Institución Educativa San Antonio de Padua</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="../index.html" class="header__logo">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="header__escudo">
+        <span class="header__nombre">Institución Educativa San Antonio de Padua</span>
+      </a>
+
+      <!-- Botón del menú móvil: solo visible en pantallas pequeñas -->
+      <button type="button" class="header__menu-boton" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a href="../index.html" class="nav__enlace">Inicio</a></li>
+          <li><a href="servicios-academicos.html" class="nav__enlace">Servicios</a></li>
+          <li><a href="nosotros-institucion.html" class="nav__enlace" aria-current="page">Nosotros</a></li>
+          <li><a href="noticias.html" class="nav__enlace">Noticias</a></li>
+          <li><a href="admisiones.html" class="nav__enlace">Admisiones</a></li>
+        </ul>
+      </nav>
+
+      <a href="contacto.html" class="boton boton--primario">Contáctanos</a>
+    </div>
+  </header>
+
+  <main class="contenido-principal">
+
+    <!-- Banner de sección -->
+    <section class="banner">
+      <img src="../assets/images/nosotros/nosotros-banner.jpg" alt="Pieza gráfica de la sección Nosotros con el escudo, la fachada de la institución y un grupo de estudiantes" class="banner__imagen">
+      <!-- El banner ya muestra "Nosotros": el título se conserva solo para lectores de pantalla -->
+      <h1 class="sr-only">Nosotros</h1>
+    </section>
+
+    <!-- Navegación entre las páginas de la sección Nosotros -->
+    <nav class="navegacion-seccion contenedor" aria-label="Navegación de Nosotros">
+      <ul class="navegacion-seccion__lista">
+        <li><a href="nosotros-institucion.html" class="navegacion-seccion__enlace navegacion-seccion__enlace--activo" aria-current="page">Institución</a></li>
+        <li><a href="nosotros-historia.html" class="navegacion-seccion__enlace">Historia</a></li>
+        <li><a href="nosotros-campus.html" class="navegacion-seccion__enlace">Campus</a></li>
+      </ul>
+    </nav>
+
+    <!--
+      Misión y Visión: textos provisionales del prototipo. No son las versiones
+      oficiales de la institución, que siguen pendientes de validación.
+    -->
+    <section class="mision-vision contenedor">
+      <div class="mision-vision__bloque">
+        <h2>Misión</h2>
+        <p>Brindar una formación integral que fortalezca el conocimiento, los valores, la convivencia y el desarrollo de habilidades en los estudiantes, promoviendo una comunidad educativa comprometida con el aprendizaje y el crecimiento personal.</p>
+      </div>
+      <div class="mision-vision__bloque">
+        <h2>Visión</h2>
+        <p>Consolidarse como una institución educativa reconocida por su compromiso con la formación integral, la calidad académica, los valores y la participación de su comunidad, preparando a los estudiantes para afrontar de manera responsable los retos de su entorno.</p>
+      </div>
+    </section>
+
+    <!-- Rectoría: dato entregado por la institución -->
+    <section class="rectoria contenedor">
+      <h2>Rectoría</h2>
+      <p><span class="rectoria__cargo">Rector:</span> Wilson Fernando Orozco Velasco</p>
+    </section>
+
+    <!-- Uniformes: las fotografías se pueden ampliar en el visor (visor-fotos.js) -->
+    <section class="uniformes contenedor">
+      <h2>Uniformes</h2>
+      <div class="uniformes__grid">
+        <article class="tarjeta">
+          <img src="../assets/images/nosotros/uniforme-diario.jpg" alt="Uniforme diario de la Institución Educativa San Antonio de Padua" class="tarjeta__imagen tarjeta__imagen--completa">
+          <h3 class="tarjeta__titulo">Uniforme Diario</h3>
+        </article>
+        <article class="tarjeta">
+          <img src="../assets/images/nosotros/uniforme-educacion-fisica.jpg" alt="Uniforme de Educación Física de la Institución Educativa San Antonio de Padua" class="tarjeta__imagen tarjeta__imagen--completa">
+          <h3 class="tarjeta__titulo">Uniforme de Educación Física</h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- Escudo: texto respaldado por informacion-sap.pdf -->
+    <section class="simbolo contenedor">
+      <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="simbolo__imagen">
+      <div class="simbolo__texto">
+        <h2>Escudo</h2>
+        <p>
+          El escudo institucional está conformado por tres cuarteles. En el primero,
+          sobre campo azul, se destaca una estrella de oro. En el segundo, sobre campo
+          verde, aparecen un libro y una pluma. En el cuartel inferior, sobre campo de
+          oro, se encuentra el caduceo. El escudo está enmarcado por dos cintas: la
+          superior con el nombre de la institución y la inferior con los colores de la
+          bandera institucional, e incluye referencias a la Villa Heráldica de Timbío
+          y al departamento del Cauca.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bandera: texto respaldado por informacion-sap.pdf -->
+    <section class="simbolo contenedor">
+      <img src="../assets/images/institucional/bandera.png" alt="Bandera de la Institución Educativa San Antonio de Padua" class="simbolo__imagen">
+      <div class="simbolo__texto">
+        <h2>Bandera</h2>
+        <p>
+          La bandera institucional es de forma rectangular, conformada por tres
+          franjas horizontales de igual tamaño. Las franjas blancas de los extremos
+          simbolizan la fe, la paz y la pureza; la franja central de color verde
+          representa la naturaleza, la esperanza y la fertilidad de las virtudes. En
+          el centro se destaca la flor blanca, símbolo de San Antonio de Padua y San
+          José, junto con el libro, símbolo del conocimiento, acompañados del lema
+          tradicional "Virtud y Saber".
+        </p>
+      </div>
+    </section>
+
+    <!-- Himno: letra completa respaldada por informacion-sap.pdf -->
+    <section class="himno contenedor">
+      <h2>Himno Institucional</h2>
+
+      <h3>Coro</h3>
+      <p class="himno__coro">
+        San Antonio de Padua es Colegio<br>
+        que brinda integral formación,<br>
+        a quien a sus lares se coge,<br>
+        sediento de gran superación.
+      </p>
+
+      <h3>Estrofa I</h3>
+      <p class="himno__estrofa">
+        En tus aulas bebemos la ciencia<br>
+        Que nos hace en la vida triunfar.<br>
+        Tus docentes con gran eficiencia,<br>
+        Altas metas te harán alcanzar.<br>
+        De minerva, alcázar glorioso,<br>
+        tus alumnos te quieren cantar<br>
+        y Timbío se siente orgulloso<br>
+        al poder tal plantel albergar.
+      </p>
+
+      <h3>Estrofa II</h3>
+      <p class="himno__estrofa">
+        En la noche de gran ignorancia<br>
+        Tú señalas con mágica luz,<br>
+        las doctrinas que en vida nos diera<br>
+        el Divino maestro Jesús.<br>
+        San Antonio de Padua dispense<br>
+        su celeste y gran protección,<br>
+        a quien viene a librar en tus fuentes<br>
+        de la ciencia el munífico don.
+      </p>
+
+      <h3>Estrofa III</h3>
+      <p class="himno__estrofa">
+        Si la ciencia transforma la industria<br>
+        y la técnica da perfección,<br>
+        el estudio las mentes adiestra<br>
+        y a los hombres les da erudición.<br>
+        Transformar en servicio la vida,<br>
+        es muy noble y sublime ambición,<br>
+        la existencia así concebida<br>
+        llena el alma de noble fruición.
+      </p>
+
+      <h3>Estrofa IV</h3>
+      <p class="himno__estrofa">
+        Compromisos de todos el cambio<br>
+        del Colegio es el lema a seguir<br>
+        importante consigna que todos<br>
+        prometemos fielmente cumplir.<br>
+        La estrella, el libro y la pluma<br>
+        nos señalan la senda del bien,<br>
+        tus alumnos por ello te cantan<br>
+        como muestra de su gratitud.
+      </p>
+
+      <p class="himno__autoria">
+        Letra: Hno. Víctor Villegas V. — Música y Arreglos: Jorge y Fabio Coral G.
+      </p>
+    </section>
+
+    <!-- Reglamento / Manual de Convivencia: imagen alusiva del equipo; el documento oficial sigue pendiente, por eso no hay enlace ni descarga -->
+    <section class="documento-seccion contenedor">
+      <h2>Reglamento / Manual de Convivencia</h2>
+      <img src="../assets/images/nosotros/manual-convivencia.jpg" alt="Pieza gráfica alusiva al Manual de Convivencia de la Institución Educativa San Antonio de Padua" class="documento-imagen">
+    </section>
+
+    <!--
+      Documentación institucional: explicación general de cada documento.
+      Los documentos oficiales aún no se han entregado, por eso no hay enlaces ni descargas.
+    -->
+    <section class="documentos-lista contenedor">
+      <h2>Documentación Institucional</h2>
+      <div class="documentos-lista__grid">
+        <article class="tarjeta tarjeta--circulo">
+          <h3 class="tarjeta__titulo"><span class="circulo circulo--compacto">Proyecto Educativo Institucional (PEI)</span></h3>
+          <p>El Proyecto Educativo Institucional reúne los principios, objetivos y orientaciones que guían la formación académica, humana y social de una comunidad educativa.</p>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <h3 class="tarjeta__titulo"><span class="circulo circulo--compacto">Sistema Institucional de Evaluación de Estudiantes</span></h3>
+          <p>El sistema de evaluación permite acompañar el aprendizaje de los estudiantes, reconocer sus avances y establecer criterios para valorar su desempeño académico.</p>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <h3 class="tarjeta__titulo"><span class="circulo circulo--compacto">Reglamento / Manual de Convivencia</span></h3>
+          <p>El Manual de Convivencia orienta las relaciones dentro de la comunidad educativa, promoviendo el respeto, la responsabilidad, la participación y la solución pacífica de los conflictos.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+
+      <div class="footer__institucion">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="footer__escudo">
+        <p class="footer__nombre">Institución Educativa San Antonio de Padua</p>
+        <!-- Redes sociales: Facebook enlaza a la página oficial; las demás se muestran como texto porque sus enlaces siguen pendientes -->
+        <ul class="footer__redes">
+          <li><a href="https://www.facebook.com/ColegioSanAntonioDePaduaTimbio" class="footer__red-social footer__red-social--enlace" target="_blank" rel="noopener noreferrer">Facebook<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li><span class="footer__red-social">Instagram</span></li>
+          <li><span class="footer__red-social">LinkedIn</span></li>
+          <li><span class="footer__red-social">YouTube</span></li>
+        </ul>
+      </div>
+
+      <div class="footer__enlaces">
+        <h3 class="footer__titulo">Enlaces rápidos</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="servicios-academicos.html">Servicios</a></li>
+          <li><a href="nosotros-institucion.html">Nosotros</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="admisiones.html">Admisiones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contacto">
+        <h3 class="footer__titulo">Contacto</h3>
+        <ul>
+          <!-- Canales de contacto entregados por la institución (WhatsApp y correo) -->
+          <li>WhatsApp: <a href="https://wa.me/573105397139" target="_blank" rel="noopener noreferrer">310 539 7139<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li>Correo: <a href="mailto:colegiosanantoniodep@gmail.com">colegiosanantoniodep@gmail.com</a></li>
+          <li>Ubicación: Timbío, Cauca</li>
+        </ul>
+      </div>
+
+      <div class="footer__ubicacion">
+        <h3 class="footer__titulo">Ubicación</h3>
+        <!-- Dirección entregada por la institución y búsqueda de esa dirección en Google Maps (sin coordenadas ni mapa incrustado) -->
+        <div class="footer__ubicacion-pendiente">
+          <p class="footer__ubicacion-lugar">Calle 15 No. 14-89, Barrio Belén, Timbío, Cauca, Colombia</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2015%20No.%2014-89%2C%20Barrio%20Bel%C3%A9n%2C%20Timb%C3%ADo%2C%20Cauca%2C%20Colombia" class="footer__mapa" target="_blank" rel="noopener noreferrer">Ver en Google Maps<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__linea-inferior">
+      <p>&copy; 2026 Institución Educativa San Antonio de Padua. Todos los derechos reservados.</p>
+      <!-- Documentos legales: se muestran como texto porque los textos oficiales siguen pendientes -->
+      <ul class="footer__legal">
+        <li><span>Política de Privacidad</span></li>
+        <li><span>Términos y Condiciones</span></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/visor-fotos.js"></script>
+</body>
+</html>

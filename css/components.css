@@ -1,0 +1,1991 @@
+/* Encabezado institucional */
+.header {
+  background-color: var(--color-fondo);
+  border-bottom: 1px solid var(--color-fondo-alterno);
+  padding: var(--espacio-md) var(--espacio-lg);
+}
+
+.header__contenedor {
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-md);
+}
+
+/* Bloque de identidad institucional (logo + nombre) */
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-sm);
+}
+
+.header__nombre {
+  font-weight: bold;
+}
+
+/* Escudo institucional: "contain" evita que se recorte o deforme */
+.header__escudo,
+.footer__escudo {
+  object-fit: contain;
+}
+
+.header__escudo {
+  width: 48px;
+  height: 48px;
+}
+
+/* Navegación principal */
+.nav__lista {
+  display: flex;
+  gap: var(--espacio-md);
+  list-style: none;
+}
+
+.nav__enlace {
+  font-weight: 500;
+}
+
+.nav__enlace:hover {
+  color: var(--color-primario);
+}
+
+/* Botón del menú móvil: oculto en escritorio y tablet */
+.header__menu-boton {
+  display: none;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-primario);
+  border-radius: 4px;
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header__menu-boton:hover {
+  background-color: var(--color-fondo-alterno);
+}
+
+/* Botones */
+.boton {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.boton--primario {
+  background-color: var(--color-primario);
+  color: var(--color-texto-claro);
+}
+
+.boton--primario:hover {
+  background-color: var(--color-primario-oscuro);
+}
+
+/* Enlace dentro de un texto (correo, WhatsApp, blog): azul y subrayado */
+.enlace-texto {
+  color: var(--color-primario);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+}
+
+.enlace-texto:hover {
+  color: var(--color-primario-oscuro);
+}
+
+/* Nota breve junto a un enlace externo (archivo histórico del blog en Noticias) */
+.enlace-externo__nota {
+  margin-top: var(--espacio-sm);
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+/* Pie de página institucional */
+.footer {
+  background-color: var(--color-primario-oscuro);
+  color: var(--color-texto-claro);
+  padding: var(--espacio-lg);
+}
+
+.footer__contenedor {
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-lg);
+}
+
+/* Columnas del footer */
+.footer__institucion,
+.footer__enlaces,
+.footer__contacto,
+.footer__ubicacion {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* El escudo tiene fondo blanco: un recuadro claro lo integra mejor al footer oscuro */
+.footer__escudo {
+  width: 56px;
+  height: 56px;
+  padding: 4px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: var(--espacio-sm);
+}
+
+.footer__nombre {
+  font-weight: bold;
+  margin-bottom: var(--espacio-sm);
+}
+
+.footer__redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-sm);
+  list-style: none;
+  margin-top: var(--espacio-sm);
+}
+
+.footer__titulo {
+  color: var(--color-texto-claro);
+  margin-bottom: var(--espacio-sm);
+}
+
+.footer__enlaces ul,
+.footer__contacto ul {
+  list-style: none;
+}
+
+.footer__enlaces li,
+.footer__contacto li {
+  margin-bottom: var(--espacio-sm);
+}
+
+/* Enlaces de contacto y de Facebook en el footer: subrayados para que se reconozcan como enlaces */
+.footer__contacto a,
+.footer__red-social--enlace {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer__contacto a:hover,
+.footer__red-social--enlace:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Oculta un elemento a la vista sin quitarlo para los lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Aviso visible cuando una función no puede mostrarse (recorrido 360° sin JavaScript) */
+.aviso {
+  margin: var(--espacio-md) 0;
+  padding: 0.75rem var(--espacio-md);
+  border-left: 4px solid var(--color-primario);
+  border-radius: 4px;
+  background-color: var(--color-fondo-alterno);
+  color: var(--color-texto);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Bloque de ubicación del footer: dirección y botón para abrirla en Google Maps.
+   (La clase conserva su nombre original "pendiente" para no cambiar las diez páginas) */
+.footer__ubicacion-pendiente {
+  max-width: 320px;
+  padding: var(--espacio-md);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.footer__ubicacion-lugar {
+  font-weight: 600;
+  margin-bottom: var(--espacio-sm);
+}
+
+/* Botón claro "Ver en Google Maps" dentro del recuadro de ubicación */
+.footer__mapa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: var(--color-primario);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.footer__mapa:hover {
+  background-color: #e8edff;
+}
+
+.footer__mapa:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Ícono de ubicación dibujado con CSS (no se descarga ninguna imagen) */
+.footer__mapa::before,
+.contacto-info__mapa::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  border: 2px solid currentColor;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+
+.footer__linea-inferior {
+  max-width: var(--ancho-maximo);
+  margin: var(--espacio-lg) auto 0;
+  padding-top: var(--espacio-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--espacio-sm);
+}
+
+.footer__legal {
+  display: flex;
+  gap: var(--espacio-md);
+  list-style: none;
+}
+
+/* Navegación secundaria entre páginas de una misma sección (Nosotros, Servicios) */
+.navegacion-seccion {
+  padding: var(--espacio-md) 0;
+}
+
+.navegacion-seccion__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-sm);
+  list-style: none;
+}
+
+.navegacion-seccion__enlace {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--color-primario);
+  border-radius: 4px;
+  color: var(--color-primario);
+  font-weight: 500;
+}
+
+.navegacion-seccion__enlace:hover {
+  background-color: var(--color-fondo-alterno);
+}
+
+/* Página actual dentro de la navegación secundaria */
+.navegacion-seccion__enlace--activo {
+  background-color: var(--color-primario);
+  color: var(--color-texto-claro);
+}
+
+.navegacion-seccion__enlace--activo:hover {
+  background-color: var(--color-primario);
+}
+
+/* Banner / noticia destacada de Inicio */
+.banner {
+  background-color: var(--color-fondo-alterno);
+  padding: var(--espacio-lg) var(--espacio-md);
+}
+
+/* Banner provisional sin imagen (detalle de noticia): franja con los colores del sitio */
+.banner--franja {
+  background: linear-gradient(90deg, var(--color-primario-oscuro), var(--color-primario));
+  padding: 4rem var(--espacio-md);
+}
+
+.banner__franja-texto {
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  color: var(--color-texto-claro);
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Imagen real del banner: se muestra completa conservando su proporción */
+.banner__imagen {
+  width: 100%;
+  max-width: var(--ancho-maximo);
+  height: auto;
+  margin: 0 auto;
+}
+
+.banner__contenido {
+  max-width: var(--ancho-maximo);
+  margin: var(--espacio-md) auto 0;
+  text-align: center;
+}
+
+/* Carrusel de la portada de Inicio (portada.js): una fotografía a la vez */
+.portada {
+  position: relative;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+}
+
+.portada__ventana {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.portada__pista {
+  display: flex;
+}
+
+.portada__diapositiva {
+  position: relative;
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+/* Sin JavaScript solo se muestra la primera fotografía */
+.portada__diapositiva + .portada__diapositiva {
+  display: none;
+}
+
+.portada--activa .portada__diapositiva + .portada__diapositiva {
+  display: block;
+}
+
+/* Transición suave al cambiar de fotografía */
+.portada--activa .portada__pista {
+  transition: transform 0.5s ease, opacity 0.2s ease;
+}
+
+/* Salto entre la última y la primera fotografía (bucle): la pista se desvanece
+   y cambia de posición sin deslizarse por todas las fotografías */
+.portada__pista--desvanecida {
+  opacity: 0;
+}
+
+.portada--activa .portada__pista--sin-deslizar {
+  transition: opacity 0.2s ease;
+}
+
+/* Las fotografías se recortan para llenar el espacio, sin deformarse */
+.portada__imagen {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+
+/* Sube el encuadre de la Banda Marcial para que se vean los rostros */
+.portada__imagen--banda {
+  object-position: center 40%;
+}
+
+/* Texto corto sobre cada fotografía */
+.portada__leyenda {
+  position: absolute;
+  left: var(--espacio-md);
+  bottom: var(--espacio-md);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  background-color: rgba(30, 58, 138, 0.88);
+  color: var(--color-texto-claro);
+  font-weight: 600;
+}
+
+/* Flechas sobre la fotografía */
+.portada__flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-primario);
+  font-size: 2rem;
+  line-height: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.portada__flecha--anterior {
+  left: var(--espacio-md);
+}
+
+.portada__flecha--siguiente {
+  right: var(--espacio-md);
+}
+
+.portada__flecha:hover:not(:disabled) {
+  background-color: var(--color-fondo);
+}
+
+/* En la primera o la última fotografía la flecha correspondiente se atenúa */
+.portada__flecha:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* Indicadores: un punto por fotografía; el de la fotografía visible va relleno */
+.portada__indicadores {
+  display: flex;
+  justify-content: center;
+  gap: var(--espacio-sm);
+  margin-top: var(--espacio-md);
+}
+
+/* Necesario para que el atributo hidden oculte los controles aunque tengan display propio */
+.portada__indicadores[hidden],
+.portada__flecha[hidden] {
+  display: none;
+}
+
+/* El botón mide 24 px para que sea fácil de tocar; el punto se dibuja con ::before */
+.portada__indicador {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+
+.portada__indicador::before {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: auto;
+  border: 2px solid var(--color-primario);
+  border-radius: 50%;
+}
+
+.portada__indicador[aria-current="true"]::before {
+  background-color: var(--color-primario);
+}
+
+/* Foco visible con teclado en flechas e indicadores */
+.portada__flecha:focus-visible,
+.portada__indicador:focus-visible {
+  outline: 3px solid var(--color-primario);
+  outline-offset: 2px;
+}
+
+/* Sin animación para quienes prefieren movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .portada--activa .portada__pista {
+    transition: none;
+  }
+
+  .estadisticas__pista {
+    animation: none;
+  }
+}
+
+/* Sección Sobre Nosotros: pieza panorámica arriba y texto debajo */
+.sobre-nosotros {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-lg);
+  padding: var(--espacio-lg) var(--espacio-md);
+}
+
+.sobre-nosotros__imagen-placeholder {
+  flex: 1;
+  height: 220px;
+  background-color: var(--color-fondo-alterno);
+  border: 1px dashed #9ca3af;
+}
+
+/* La pieza panorámica ocupa todo el ancho y se muestra completa */
+.sobre-nosotros__imagen {
+  width: 100%;
+  height: auto;
+}
+
+.sobre-nosotros__texto {
+  flex: 1;
+}
+
+/* Botón de Sobre Nosotros: centrado debajo del párrafo */
+.sobre-nosotros__cta {
+  margin-top: var(--espacio-md);
+  text-align: center;
+}
+
+/* Sección Conoce nuestra institución */
+.accesos {
+  padding: var(--espacio-lg) var(--espacio-md);
+}
+
+.accesos__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-md);
+}
+
+/* Componente tarjeta, reutilizable en otras secciones y páginas */
+.tarjeta {
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-fondo-alterno);
+  border-radius: 4px;
+  padding: var(--espacio-md);
+  text-align: center;
+}
+
+.tarjeta__imagen-placeholder {
+  height: 140px;
+  background-color: var(--color-fondo-alterno);
+  border: 1px dashed #9ca3af;
+  margin-bottom: var(--espacio-sm);
+}
+
+/* Imagen real de tarjeta: ocupa el ancho de la tarjeta con la altura del placeholder */
+.tarjeta__imagen {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: var(--espacio-sm);
+}
+
+/* Variante que sube el encuadre para no cortar caras (por ejemplo, Brigada de Rescate) */
+.tarjeta__imagen--arriba {
+  object-position: center 30%;
+}
+
+/* Variante para imágenes que deben verse completas (por ejemplo, uniformes) */
+.tarjeta__imagen--completa {
+  height: 320px;
+  object-fit: contain;
+}
+
+/* Variante para piezas gráficas que conservan su proporción original (Proceso de Admisión) */
+.tarjeta__imagen--proporcional {
+  height: auto;
+}
+
+/* Variante más alta para la imagen de la tarjeta grande de Noticias y Eventos */
+.tarjeta__imagen--destacada {
+  height: 400px;
+  object-position: center 48%;
+}
+
+/* Variante para las fotografías de Hitos Históricos: misma proporción en las seis tarjetas */
+.tarjeta__imagen--hito {
+  height: auto;
+  aspect-ratio: 2 / 1;
+}
+
+.tarjeta__titulo {
+  font-size: 1rem;
+}
+
+.tarjeta__titulo a:hover {
+  color: var(--color-primario);
+}
+
+/* Círculo decorativo detrás de títulos y enlaces destacados.
+   Es un fondo del propio texto: el relleno se compensa con margen negativo
+   para que nada se desplace, y las letras siempre quedan por encima. */
+.circulo {
+  display: inline-block;
+  padding: 0.6em 0.9em;
+  margin: -0.6em -0.9em;
+  /* Azul principal del sitio al 20 %; el centro va un poco arriba para quedar detrás de las letras */
+  background-image: radial-gradient(circle closest-side, rgba(29, 78, 216, 0.2) 97%, transparent 100%);
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+  background-size: 0 0;
+  transition: background-size 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Tarjetas que son enlaces: también aparece al recibir el foco con el teclado */
+.tarjeta--enlace .circulo:focus-visible,
+a.tarjeta:focus-visible .circulo {
+  background-size: 100% 100%;
+}
+
+/* Al pasar el mouse: aparece mientras el cursor está sobre la tarjeta y desaparece al salir.
+   Solo en dispositivos con mouse, para que en pantallas táctiles no quede activado tras un toque.
+   .tarjeta--circulo son tarjetas informativas: el efecto es solo visual, sin enlace ni foco. */
+@media (hover: hover) and (pointer: fine) {
+  .tarjeta--enlace:hover .circulo,
+  a.tarjeta:hover .circulo,
+  .tarjeta--circulo:hover .circulo {
+    background-size: 100% 100%;
+  }
+}
+
+/* Variante compacta para tarjetas con un párrafo justo debajo del título
+   (Información Importante, Contacto): mismo color y animación, menos alto,
+   para que el círculo no alcance el texto descriptivo */
+.circulo--compacto {
+  /* Sin relleno abajo: el círculo termina donde termina la línea del título */
+  padding: 0.35em 0.75em 0;
+  margin: -0.35em -0.75em 0;
+}
+
+/* Con movimiento reducido el círculo aparece sin animación */
+@media (prefers-reduced-motion: reduce) {
+  .circulo {
+    transition: none;
+  }
+}
+
+/* Indicación breve debajo del título de una tarjeta (por ejemplo, "Recorrido virtual próximamente") */
+.tarjeta__etiqueta {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+/* Tarjeta completamente clicable: el enlace del título se extiende con ::after
+   sobre toda la tarjeta, sin enlaces anidados ni JavaScript */
+.tarjeta--enlace {
+  position: relative;
+}
+
+.tarjeta--enlace .tarjeta__titulo a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+}
+
+/* Foco visible con teclado alrededor de toda la tarjeta */
+.tarjeta--enlace .tarjeta__titulo a:focus-visible {
+  outline: none;
+}
+
+.tarjeta--enlace .tarjeta__titulo a:focus-visible::after {
+  outline: 3px solid var(--color-primario);
+  outline-offset: 2px;
+}
+
+/* Variante de tarjeta más grande, usada en Noticias y Eventos */
+.tarjeta--grande {
+  grid-column: 1 / -1;
+  text-align: left;
+}
+
+/* Banda de estadísticas institucionales */
+.estadisticas {
+  background-color: var(--color-primario-oscuro);
+  color: var(--color-texto-claro);
+  padding: var(--espacio-lg) var(--espacio-md);
+}
+
+.estadisticas__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--espacio-md);
+  text-align: center;
+}
+
+.estadisticas__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-sm);
+}
+
+.estadisticas__numero {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Banda de estadísticas en movimiento continuo (animaciones.js).
+   Sin JavaScript, o con movimiento reducido, se mantiene la cuadrícula fija. */
+.estadisticas--marquesina .estadisticas__grid {
+  display: block;
+}
+
+/* La banda puede recibir el foco con Tab: se ve un contorno claro y el movimiento se detiene */
+.estadisticas--marquesina .estadisticas__grid:focus-visible {
+  outline: 2px solid var(--color-texto-claro);
+  outline-offset: 6px;
+}
+
+/* Ventana de la banda: oculta lo que sale por los lados y difumina los bordes */
+.estadisticas__ventana {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+/* Pista con los cinco bloques y su copia: al moverse la mitad de su ancho,
+   la copia queda donde estaban los originales y el bucle no tiene saltos */
+.estadisticas__pista {
+  display: flex;
+  width: max-content;
+  animation: desplazar-estadisticas 45s linear infinite;
+}
+
+/* Cada bloque tiene un ancho fijo para que el recorrido sea uniforme */
+.estadisticas__pista .estadisticas__item {
+  flex: 0 0 16rem;
+  padding: 0 1rem;
+}
+
+@keyframes desplazar-estadisticas {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pausa al pasar el mouse por la banda o cuando el foco del teclado está en ella */
+.estadisticas--marquesina .estadisticas__grid:hover .estadisticas__pista,
+.estadisticas--marquesina .estadisticas__grid:focus-within .estadisticas__pista {
+  animation-play-state: paused;
+}
+
+.estadisticas__etiqueta {
+  font-size: 0.9rem;
+}
+
+/* Sección Noticias y Eventos */
+.noticias-eventos {
+  padding: var(--espacio-lg) var(--espacio-md);
+}
+
+.noticias-eventos__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-md);
+}
+
+/* Bloque Misión y Visión */
+/* Rectoría: nombre del rector */
+.rectoria {
+  padding: 0 0 var(--espacio-lg);
+}
+
+.rectoria p {
+  margin-top: var(--espacio-sm);
+}
+
+.rectoria__cargo {
+  font-weight: 600;
+}
+
+.mision-vision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-lg);
+  padding: var(--espacio-lg) 0;
+}
+
+.mision-vision__bloque {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Separa el título de Misión y Visión de su texto */
+.mision-vision__bloque p {
+  margin-top: var(--espacio-sm);
+}
+
+/* Sección de uniformes */
+.uniformes {
+  padding: var(--espacio-lg) 0;
+}
+
+.uniformes__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--espacio-md);
+  margin: var(--espacio-md) 0 var(--espacio-lg);
+}
+
+/* Símbolos institucionales (Escudo, Bandera): imagen + texto */
+.simbolo {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-lg);
+  padding: var(--espacio-lg) 0;
+}
+
+.simbolo__imagen-placeholder {
+  flex: 1;
+  height: 200px;
+  background-color: var(--color-fondo-alterno);
+  border: 1px dashed #9ca3af;
+}
+
+/* Imagen real del símbolo: misma altura del placeholder, completa y sin deformarse */
+.simbolo__imagen {
+  flex: 1;
+  min-width: 0;
+  height: 200px;
+  object-fit: contain;
+}
+
+.simbolo__texto {
+  flex: 1;
+}
+
+/* Himno institucional */
+.himno {
+  padding: var(--espacio-lg) 0;
+  text-align: center;
+}
+
+.himno__coro,
+.himno__estrofa {
+  margin-bottom: var(--espacio-md);
+}
+
+.himno__autoria {
+  margin-top: var(--espacio-md);
+  font-style: italic;
+}
+
+/* Reglamento / Manual de Convivencia */
+.documento-seccion {
+  padding: var(--espacio-lg) 0;
+}
+
+/* Imagen alusiva al Manual de Convivencia: se muestra completa y conserva su proporción */
+.documento-imagen {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: var(--espacio-md) 0;
+}
+
+/* Documentación institucional, Materias y Requisitos comparten el mismo espaciado de sección */
+.documentos-lista,
+.materias,
+.requisitos {
+  padding: var(--espacio-lg) 0;
+}
+
+/* Separa el título de Requisitos del párrafo que lo sigue */
+.requisitos h2 {
+  margin-bottom: var(--espacio-sm);
+}
+
+.documentos-lista ul,
+.materias__lista,
+.requisitos__lista {
+  list-style: none;
+}
+
+.documentos-lista li,
+.materias__lista li,
+.requisitos__lista li {
+  margin-bottom: var(--espacio-sm);
+}
+
+/* Documentación institucional: tres tarjetas en una fila */
+.documentos-lista__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-md);
+}
+
+/* Materias: tres tarjetas de áreas de aprendizaje en una fila */
+.materias__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-md);
+}
+
+/* Lista de documentos de Admisiones: con viñetas y separada de los párrafos */
+.requisitos__lista--documentos {
+  list-style: disc;
+  padding-left: var(--espacio-md);
+  margin: var(--espacio-sm) 0 var(--espacio-md);
+}
+
+/* Hitos históricos */
+.hitos-historicos {
+  padding: var(--espacio-lg) 0;
+}
+
+.hitos-historicos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-md);
+}
+
+/* Reseña histórica: ancho de lectura más cómodo que el contenedor general */
+.historia {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: var(--espacio-lg);
+  padding-bottom: var(--espacio-lg);
+}
+
+/* Recorrido 360° */
+.recorrido360 {
+  padding: var(--espacio-lg) 0;
+}
+
+/* ---------- Recorrido 360° (recorrido360.js) ---------- */
+
+.recorrido360__intro {
+  margin: var(--espacio-sm) 0 0;
+}
+
+/* Tarjetas de los cuatro espacios */
+.recorrido360__espacios {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espacio-md);
+  margin: var(--espacio-md) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recorrido360__espacio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 48px;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid var(--color-fondo-alterno);
+  border-radius: 8px;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.recorrido360__espacio:hover {
+  border-color: var(--color-primario);
+  transform: translateY(-2px);
+}
+
+.recorrido360__espacio:focus-visible {
+  outline: 3px solid var(--color-primario);
+  outline-offset: 2px;
+}
+
+/* Espacio que se está mostrando */
+.recorrido360__espacio[aria-pressed="true"] {
+  border-color: var(--color-primario);
+  background-color: var(--color-primario);
+  color: var(--color-texto-claro);
+}
+
+.recorrido360__miniatura {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.recorrido360__nombre {
+  padding: 0.6rem 0.75rem;
+  font-weight: 600;
+}
+
+/* Ventana del panorama */
+.recorrido360__visor {
+  position: relative;
+}
+
+.recorrido360__escena {
+  position: relative;
+  height: min(70vh, 600px);
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--color-primario-oscuro);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Necesario para que el atributo hidden oculte el visor y las tarjetas aunque tengan estilos propios */
+.recorrido360__espacios[hidden],
+.recorrido360__portada[hidden],
+.recorrido360__escena[hidden] {
+  display: none;
+}
+
+.recorrido360__escena:active {
+  cursor: grabbing;
+}
+
+.recorrido360__escena:focus-visible {
+  outline: 3px solid var(--color-primario);
+  outline-offset: 3px;
+}
+
+/* El cubo se centra en la escena; la cámara queda en su centro */
+.recorrido360__cubo {
+  --lado: 1024px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+}
+
+/* Mientras se cargan las fotografías, el panorama anterior se atenúa */
+.recorrido360__escena--cargando .recorrido360__cubo {
+  opacity: 0.35;
+}
+
+.recorrido360__cara {
+  position: absolute;
+  width: var(--lado);
+  height: var(--lado);
+  margin: calc(var(--lado) / -2) 0 0 calc(var(--lado) / -2);
+  backface-visibility: hidden;
+}
+
+/* Fotografía de cada cara: ocupa toda la cara (las laterales miden 2048 px y techo y suelo 1024 px) */
+.recorrido360__textura {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Cada cara se coloca a media arista del centro, mirando hacia adentro.
+   scale(1.002) superpone apenas los bordes para que no aparezcan líneas entre caras */
+.recorrido360__cara--frente    { transform: translateZ(calc(var(--lado) / -2)) scale(1.002); }
+.recorrido360__cara--derecha   { transform: rotateY(-90deg) translateZ(calc(var(--lado) / -2)) scale(1.002); }
+.recorrido360__cara--atras     { transform: rotateY(180deg) translateZ(calc(var(--lado) / -2)) scale(1.002); }
+.recorrido360__cara--izquierda { transform: rotateY(90deg) translateZ(calc(var(--lado) / -2)) scale(1.002); }
+.recorrido360__cara--arriba    { transform: rotateX(-90deg) translateZ(calc(var(--lado) / -2)) scale(1.002); }
+.recorrido360__cara--abajo     { transform: rotateX(90deg) translateZ(calc(var(--lado) / -2)) scale(1.002); }
+
+/* Indicación de uso: desaparece después del primer movimiento */
+.recorrido360__ayuda {
+  position: absolute;
+  left: 50%;
+  bottom: 4.5rem;
+  transform: translateX(-50%);
+  max-width: calc(100% - 2rem);
+  margin: 0;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background-color: rgba(30, 58, 138, 0.85);
+  color: var(--color-texto-claro);
+  font-size: 0.85rem;
+  text-align: center;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.recorrido360__ayuda--oculta {
+  opacity: 0;
+}
+
+/* Mensaje de carga o de error, centrado sobre el panorama */
+.recorrido360__estado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: calc(100% - 2rem);
+  margin: 0;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-weight: 600;
+  text-align: center;
+}
+
+.recorrido360__estado--error {
+  border-left: 4px solid #b91c1c;
+}
+
+.recorrido360__controles {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Botones del visor: al menos 48 px de alto para que sean fáciles de tocar */
+.recorrido360__boton {
+  min-height: 48px;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: var(--color-primario);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.recorrido360__boton:hover {
+  background-color: var(--color-fondo);
+}
+
+.recorrido360__boton:focus-visible {
+  outline: 3px solid var(--color-texto-claro);
+  outline-offset: 2px;
+}
+
+/* En pantalla completa el panorama ocupa toda la pantalla */
+.recorrido360__visor:fullscreen .recorrido360__escena {
+  height: 100vh;
+  border-radius: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recorrido360__espacio,
+  .recorrido360__ayuda {
+    transition: none;
+  }
+
+  .recorrido360__espacio:hover {
+    transform: none;
+  }
+}
+
+/* Pieza gráfica de apoyo: ocupa el ancho de la sección y se muestra completa */
+.imagen-apoyo {
+  width: 100%;
+  height: auto;
+  margin: var(--espacio-md) 0;
+}
+
+/* Laboratorios */
+.laboratorios {
+  padding: var(--espacio-lg) 0;
+}
+
+.laboratorios__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-md);
+}
+
+/* Detalle de laboratorio */
+.laboratorio-detalle {
+  padding: var(--espacio-lg) 0;
+}
+
+.laboratorio-detalle__galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacio-md);
+  margin: var(--espacio-md) 0;
+}
+
+/* Carrusel reutilizable: estos estilos solo aplican cuando carousel.js añade .carrusel--activo */
+.carrusel {
+  --carrusel-visibles: 1;
+}
+
+.carrusel--activo {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-sm);
+  margin-top: var(--espacio-md);
+}
+
+/* Ventana: deja ver solo los elementos visibles y oculta el resto */
+.carrusel--activo .carrusel__ventana {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Pista: todos los elementos en una fila que se desplaza */
+.carrusel--activo .carrusel__pista {
+  display: flex;
+  gap: var(--espacio-md);
+  margin: 0;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+/* Salto entre el último y el primer grupo (bucle): la pista se desvanece
+   y cambia de posición sin deslizarse por todos los elementos */
+.carrusel__pista--desvanecida {
+  opacity: 0;
+}
+
+.carrusel--activo .carrusel__pista--sin-deslizar {
+  transition: opacity 0.2s ease;
+}
+
+/* Cada elemento ocupa el ancho que le corresponde según la cantidad visible */
+.carrusel--activo .carrusel__pista > * {
+  flex: 0 0 calc((100% - (var(--carrusel-visibles) - 1) * var(--espacio-md)) / var(--carrusel-visibles));
+  min-width: 0;
+}
+
+/* Botones anterior / siguiente, con el mismo estilo de borde que la navegación secundaria */
+.carrusel__boton {
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--color-primario);
+  border-radius: 50%;
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.carrusel__boton:hover:not(:disabled) {
+  background-color: var(--color-fondo-alterno);
+}
+
+/* Botón desactivado al llegar al primer o al último elemento */
+.carrusel__boton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* Hitos históricos: 3 tarjetas visibles en escritorio */
+.carrusel--hitos {
+  --carrusel-visibles: 3;
+}
+
+/* Detalle de laboratorio: una imagen a la vez, centrada y con un ancho máximo */
+.carrusel--laboratorio.carrusel--activo {
+  max-width: 760px;
+  margin: var(--espacio-md) auto;
+}
+
+/* Quita el desplazamiento animado si el usuario prefiere menos movimiento
+   (con la misma especificidad que la regla que define la transición) */
+@media (prefers-reduced-motion: reduce) {
+  .carrusel--activo .carrusel__pista {
+    transition: none;
+  }
+}
+
+/* Oferta Académica */
+.oferta-academica {
+  padding: var(--espacio-lg) 0;
+}
+
+.oferta-academica__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-md);
+}
+
+/* Agenda Escolar */
+.agenda-escolar {
+  padding: var(--espacio-lg) 0;
+}
+
+/* Plataforma de Notas (acceso a SIGIA) */
+.plataforma-notas {
+  padding: var(--espacio-lg) 0;
+}
+
+.plataforma-notas p {
+  margin-top: var(--espacio-sm);
+}
+
+/* Pieza gráfica de la Agenda Escolar: se muestra completa y conserva su proporción */
+.agenda-escolar__imagen {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: var(--espacio-md) 0;
+}
+
+/* Detalle de noticia: título arriba, fotografía a la izquierda y texto a la
+   derecha, como en el wireframe */
+.detalle-noticias {
+  padding: var(--espacio-lg) 0;
+}
+
+/* Botón "Volver a Noticias": usa el estilo de .boton--primario, algo más compacto.
+   En celular conserva su ancho natural (no ocupa toda la fila como otros botones) */
+.boton.detalle-noticias__volver {
+  width: auto;
+  padding: 0.45rem 1rem;
+  margin-bottom: var(--espacio-md);
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.detalle-noticias__volver:focus-visible {
+  outline: 3px solid var(--color-primario);
+  outline-offset: 2px;
+}
+
+/* Mensaje discreto que se ve sin JavaScript */
+.detalle-noticias__sin-js {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.detalle-noticias__sin-js {
+  margin-bottom: var(--espacio-md);
+}
+
+/* Separa las noticias cuando se ven todas (sin JavaScript) */
+.detalle-noticia {
+  margin-bottom: var(--espacio-lg);
+}
+
+.detalle-noticia__titulo {
+  margin-bottom: var(--espacio-md);
+}
+
+.detalle-noticia__contenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espacio-lg);
+  align-items: center;
+}
+
+/* La fotografía se muestra completa, conservando su proporción */
+.detalle-noticia__imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.detalle-noticia__texto {
+  line-height: 1.6;
+}
+
+/* Título de Contacto: sin banner, solo separación cómoda respecto al header */
+.contacto-titulo {
+  padding-top: var(--espacio-lg);
+  padding-bottom: var(--espacio-md);
+}
+
+/* Información de contacto */
+.contacto-info {
+  padding-bottom: var(--espacio-lg);
+}
+
+.contacto-info__lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacio-md);
+  list-style: none;
+}
+
+.contacto-info__item {
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-fondo-alterno);
+  border-radius: 4px;
+  padding: var(--espacio-md);
+}
+
+.contacto-info__etiqueta {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--espacio-sm);
+}
+
+/* Dato principal de cada tarjeta de contacto */
+.contacto-info__dato {
+  display: block;
+}
+
+/* Descripción breve: más pequeña y suave que el dato principal */
+.contacto-info__descripcion {
+  display: block;
+  margin-top: var(--espacio-sm);
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+/* Botón "Ver en Google Maps" de la tarjeta de Ubicación */
+.contacto-info__mapa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: var(--espacio-md);
+}
+
+/* Admisiones: bloque introductorio, imagen + texto */
+.admisiones-intro {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-lg);
+  padding: var(--espacio-lg) 0;
+}
+
+/* Pieza gráfica del bloque introductorio: ocupa la mitad y se muestra completa */
+.admisiones-intro__imagen {
+  flex: 1;
+  min-width: 0;
+  height: auto;
+}
+
+/* Con el visor activo, la pieza queda dentro de un botón: el botón ocupa
+   el mismo espacio que tenía la imagen y la imagen llena el botón */
+.admisiones-intro .visor-abrir {
+  flex: 1;
+  min-width: 0;
+}
+
+.admisiones-intro .visor-abrir .admisiones-intro__imagen {
+  width: 100%;
+}
+
+.admisiones-intro__texto {
+  flex: 1;
+}
+
+/* Proceso de Admisión */
+.proceso-admision {
+  padding: var(--espacio-lg) 0;
+}
+
+.proceso-admision__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-md);
+}
+
+/* CTA de Admisiones */
+.admisiones-cta {
+  text-align: center;
+  padding: var(--espacio-lg) 0;
+}
+
+.admisiones-cta p {
+  margin-bottom: var(--espacio-md);
+}
+
+/* Botones de WhatsApp y Contáctanos, uno al lado del otro (uno debajo del otro si no caben) */
+.admisiones-cta__botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--espacio-sm);
+}
+
+/* Información Importante */
+.informacion-importante {
+  padding: var(--espacio-lg) 0;
+}
+
+.informacion-importante__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-md);
+}
+
+/* Calendario de Actividades: tabla del mes a la izquierda y, a la derecha,
+   el mes con sus botones y las cajas de notas y actividades (como en el wireframe) */
+.calendario {
+  padding: var(--espacio-lg) 0;
+}
+
+.calendario__sin-js {
+  margin-top: var(--espacio-md);
+}
+
+.calendario__contenido {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  grid-template-areas:
+    "tabla encabezado"
+    "tabla notas";
+  align-items: start;
+  gap: var(--espacio-md) var(--espacio-lg);
+  margin-top: var(--espacio-md);
+}
+
+/* Necesario para que el atributo hidden oculte el bloque aunque tenga display: grid */
+.calendario__contenido[hidden] {
+  display: none;
+}
+
+/* Mes y año con los botones anterior / siguiente a los lados */
+.calendario__encabezado {
+  grid-area: encabezado;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-sm);
+}
+
+.calendario__titulo-mes {
+  flex: 1;
+  text-align: center;
+}
+
+.calendario__nombre-mes {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.calendario__anio {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+/* Botones de navegación con el mismo estilo de los botones del carrusel */
+.calendario__boton {
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--color-primario);
+  border-radius: 50%;
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.calendario__boton:hover {
+  background-color: var(--color-fondo-alterno);
+}
+
+/* Botón para volver al mes actual: ocupa toda la fila debajo del mes */
+.calendario__boton-hoy {
+  width: 100%;
+  padding: 0.4rem var(--espacio-md);
+  border: 1px solid var(--color-primario);
+  border-radius: 4px;
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.calendario__boton-hoy:hover:not(:disabled) {
+  background-color: var(--color-fondo-alterno);
+}
+
+/* Desactivado cuando ya se está viendo el mes actual */
+.calendario__boton-hoy:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Tabla con los días del mes */
+.calendario__tabla {
+  grid-area: tabla;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.calendario__tabla th,
+.calendario__dia {
+  border: 1px solid #d1d5db;
+}
+
+.calendario__tabla th {
+  padding: var(--espacio-sm) 0;
+  background-color: var(--color-fondo-alterno);
+  font-weight: 600;
+}
+
+/* Quita el subrayado punteado que algunos navegadores ponen en las abreviaturas */
+.calendario__tabla abbr {
+  text-decoration: none;
+}
+
+/* Cada día: número arriba a la derecha, como en el wireframe */
+.calendario__dia {
+  height: 70px;
+  padding: 0.3rem;
+  text-align: right;
+  vertical-align: top;
+  background-color: var(--color-fondo);
+}
+
+.calendario__dia--vacio {
+  background-color: var(--color-fondo-alterno);
+}
+
+.calendario__numero {
+  display: inline-block;
+  min-width: 1.8rem;
+  padding: 0.1rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+/* Día de hoy: número resaltado con el color principal del sitio */
+.calendario__dia--hoy {
+  outline: 2px solid var(--color-primario);
+  outline-offset: -2px;
+}
+
+.calendario__dia--hoy .calendario__numero {
+  background-color: var(--color-primario);
+  color: var(--color-texto-claro);
+  font-weight: 700;
+}
+
+/* Día con actividad: fondo azul claro y un punto debajo del número.
+   Con el mouse o con Tab se resalta su actividad en el panel lateral. */
+.calendario__dia--actividad {
+  background-color: rgba(29, 78, 216, 0.12);
+}
+
+/* El número se ve en azul oscuro, salvo en el día de hoy, que conserva su círculo azul */
+.calendario__dia--actividad:not(.calendario__dia--hoy) .calendario__numero {
+  color: var(--color-primario-oscuro);
+  font-weight: 700;
+}
+
+.calendario__dia--actividad::after {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0.35rem 0.6rem 0 auto;
+  border-radius: 50%;
+  background-color: var(--color-primario);
+}
+
+.calendario__dia--actividad:hover,
+.calendario__dia--actividad:focus-visible {
+  background-color: rgba(29, 78, 216, 0.24);
+}
+
+.calendario__dia--actividad:focus-visible {
+  outline: 3px solid var(--color-primario);
+  outline-offset: -3px;
+}
+
+/* Cajas de Notas y Actividades del mes */
+.calendario__notas {
+  grid-area: notas;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-md);
+}
+
+.calendario__caja {
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: var(--espacio-md);
+}
+
+.calendario__caja p {
+  margin-bottom: 0;
+}
+
+.calendario__caja-titulo {
+  margin-bottom: var(--espacio-sm);
+  font-size: 1rem;
+}
+
+/* Lista de actividades del mes */
+.calendario__actividades {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.calendario__actividades li {
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  transition: background-color 0.2s ease;
+}
+
+/* Actividad resaltada al pasar el mouse o enfocar su día en el calendario */
+.calendario__actividad--resaltada {
+  background-color: rgba(29, 78, 216, 0.15);
+}
+
+/* Etiqueta "Ejemplo" de las actividades ficticias */
+.calendario__etiqueta-ejemplo {
+  display: inline-block;
+  margin-right: 0.4rem;
+  padding: 0 0.4rem;
+  border: 1px solid var(--color-primario);
+  border-radius: 999px;
+  color: var(--color-primario);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .calendario__actividades li {
+    transition: none;
+  }
+}
+
+/* Banda Marcial: actividad destacada, imagen + texto */
+.actividad-destacada {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-lg);
+  padding: var(--espacio-lg) 0;
+}
+
+.actividad-destacada__imagen-placeholder {
+  flex: 1;
+  height: 220px;
+  background-color: var(--color-fondo-alterno);
+  border: 1px dashed #9ca3af;
+}
+
+/* Foto de Banda Marcial: se muestra completa conservando su proporción */
+.actividad-destacada__imagen {
+  flex: 1;
+  min-width: 0;
+  height: auto;
+}
+
+.actividad-destacada__texto {
+  flex: 1;
+}
+
+/* Actividades */
+.actividades {
+  padding: var(--espacio-lg) 0;
+}
+
+.actividades__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-md);
+}
+
+/* Emisora Institucional */
+.emisora {
+  padding: var(--espacio-lg) 0;
+}
+
+.emisora__visor-placeholder {
+  width: 100%;
+  height: 250px;
+  background-color: var(--color-fondo-alterno);
+  border: 1px dashed #9ca3af;
+  margin: var(--espacio-md) 0;
+}
+
+/* Banner de la emisora: centrado, completo y con un ancho máximo moderado */
+.emisora__imagen {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: var(--espacio-md) auto;
+}
+
+/* ---------- Visor de fotografías ampliadas (visor-fotos.js) ---------- */
+
+/* Botón que envuelve cada fotografía: no cambia su tamaño ni su posición */
+.visor-abrir {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+}
+
+.visor-abrir img {
+  transition: filter 0.2s ease;
+}
+
+.visor-abrir:hover img {
+  filter: brightness(0.9);
+}
+
+.visor-abrir:focus-visible {
+  outline: 3px solid var(--color-primario);
+  outline-offset: 2px;
+}
+
+/* Mientras el visor está abierto, la página de fondo no se desplaza */
+.visor-abierto {
+  overflow: hidden;
+}
+
+/* Ventana del visor: ocupa toda la pantalla sobre un fondo oscuro */
+.visor {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: var(--espacio-lg) 4.5rem;
+  border: none;
+  /* El visor ocupa toda la pantalla: su propio fondo oscuro cubre la página */
+  background-color: rgba(15, 23, 42, 0.95);
+  color: var(--color-texto-claro);
+}
+
+.visor[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: aparecer-visor 0.25s ease-out;
+}
+
+.visor::backdrop {
+  background-color: rgba(15, 23, 42, 0.95);
+}
+
+@keyframes aparecer-visor {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.visor__figura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espacio-md);
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+}
+
+/* La fotografía se ve completa, sin deformarse ni ampliarse por encima de su tamaño real */
+.visor__imagen {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 12rem);
+  border-radius: 4px;
+  object-fit: contain;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.visor__leyenda {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-width: 48rem;
+  text-align: center;
+}
+
+.visor__titulo {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.visor__descripcion {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.visor__contador {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Botones del visor: círculos blancos discretos */
+.visor__cerrar,
+.visor__flecha {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-primario);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.visor__cerrar:hover,
+.visor__flecha:hover {
+  background-color: var(--color-fondo);
+}
+
+.visor__cerrar:focus-visible,
+.visor__flecha:focus-visible {
+  outline: 3px solid var(--color-texto-claro);
+  outline-offset: 3px;
+}
+
+.visor__cerrar {
+  top: var(--espacio-md);
+  right: var(--espacio-md);
+}
+
+.visor__flecha {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.visor__flecha--anterior {
+  left: var(--espacio-md);
+}
+
+.visor__flecha--siguiente {
+  right: var(--espacio-md);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visor[open] {
+    animation: none;
+  }
+
+  .visor-abrir img {
+    transition: none;
+  }
+}
+
+/* Enlace al blog antiguo, debajo de las tarjetas de Noticias y Eventos */
+.noticias-eventos__archivo {
+  margin-top: var(--espacio-md);
+}

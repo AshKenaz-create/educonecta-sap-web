@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra Historia - Institución Educativa San Antonio de Padua</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="../index.html" class="header__logo">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="header__escudo">
+        <span class="header__nombre">Institución Educativa San Antonio de Padua</span>
+      </a>
+
+      <!-- Botón del menú móvil: solo visible en pantallas pequeñas -->
+      <button type="button" class="header__menu-boton" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a href="../index.html" class="nav__enlace">Inicio</a></li>
+          <li><a href="servicios-academicos.html" class="nav__enlace">Servicios</a></li>
+          <li><a href="nosotros-institucion.html" class="nav__enlace">Nosotros</a></li>
+          <li><a href="noticias.html" class="nav__enlace">Noticias</a></li>
+          <li><a href="admisiones.html" class="nav__enlace">Admisiones</a></li>
+        </ul>
+      </nav>
+
+      <a href="contacto.html" class="boton boton--primario">Contáctanos</a>
+    </div>
+  </header>
+
+  <main class="contenido-principal">
+
+    <!-- Banner de sección -->
+    <section class="banner">
+      <img src="../assets/images/nosotros/historia-banner.jpg" alt="Pieza gráfica institucional con el escudo y dos estudiantes frente al colegio" class="banner__imagen">
+      <div class="banner__contenido">
+        <h1>Nuestra Historia</h1>
+      </div>
+    </section>
+
+    <!-- Navegación entre las páginas de la sección Nosotros -->
+    <nav class="navegacion-seccion contenedor" aria-label="Navegación de Nosotros">
+      <ul class="navegacion-seccion__lista">
+        <li><a href="nosotros-institucion.html" class="navegacion-seccion__enlace">Institución</a></li>
+        <li><a href="nosotros-historia.html" class="navegacion-seccion__enlace navegacion-seccion__enlace--activo" aria-current="page">Historia</a></li>
+        <li><a href="nosotros-campus.html" class="navegacion-seccion__enlace">Campus</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hitos históricos: carrusel manejado por carousel.js. Sin JavaScript se ven como cuadrícula -->
+    <section class="hitos-historicos contenedor">
+      <h2 id="titulo-hitos">Hitos Históricos</h2>
+      <div class="carrusel carrusel--hitos" role="region" aria-roledescription="carrusel" aria-labelledby="titulo-hitos">
+        <button type="button" class="carrusel__boton carrusel__boton--anterior" aria-label="Ver hitos anteriores" hidden><span aria-hidden="true">&#9665;</span></button>
+        <div class="carrusel__ventana">
+          <div class="carrusel__pista hitos-historicos__grid">
+            <article class="tarjeta">
+              <img src="../assets/images/nosotros/historia-1926.jpg" alt="Imagen alusiva al hito de 1926: acto público frente a la fachada del colegio" class="tarjeta__imagen tarjeta__imagen--hito">
+              <h3 class="tarjeta__titulo">1926</h3>
+              <p>El Concejo Municipal de Timbío decide destinar el edificio de la antigua Escuela Urbana de Niñas a una comunidad religiosa.</p>
+            </article>
+            <article class="tarjeta">
+              <img src="../assets/images/nosotros/historia-1934.jpg" alt="Imagen alusiva al hito de 1934: religiosas en el patio interior del colegio" class="tarjeta__imagen tarjeta__imagen--hito">
+              <h3 class="tarjeta__titulo">1934</h3>
+              <p>Llegada de las Hermanas Franciscanas de María Inmaculada a Timbío.</p>
+            </article>
+            <article class="tarjeta">
+              <img src="../assets/images/nosotros/historia-1935-actividades.jpg" alt="Imagen alusiva al inicio de actividades académicas de 1935: estudiantes formadas en el patio del colegio" class="tarjeta__imagen tarjeta__imagen--hito">
+              <h3 class="tarjeta__titulo">1935</h3>
+              <p>Inicio de actividades académicas el 9 de enero, con 299 estudiantes.</p>
+            </article>
+            <article class="tarjeta">
+              <img src="../assets/images/nosotros/historia-1935-inauguracion.jpg" alt="Imagen alusiva a la inauguración de 1935: ceremonia en el patio del colegio" class="tarjeta__imagen tarjeta__imagen--hito">
+              <h3 class="tarjeta__titulo">1935</h3>
+              <p>Inauguración oficial de la escuela el 2 de febrero.</p>
+            </article>
+            <article class="tarjeta">
+              <img src="../assets/images/nosotros/historia-1936-1937.jpg" alt="Imagen alusiva al periodo 1936-1937: estudiantes y acompañantes reunidos en el patio del colegio" class="tarjeta__imagen tarjeta__imagen--hito">
+              <h3 class="tarjeta__titulo">1936–1937</h3>
+              <p>Crecimiento de la matrícula: 392 estudiantes en 1935-1936 y 406 en 1936-1937.</p>
+            </article>
+            <article class="tarjeta">
+              <img src="../assets/images/nosotros/historia-1938.jpg" alt="Imagen alusiva al hito de 1938: acto público frente a la fachada del colegio" class="tarjeta__imagen tarjeta__imagen--hito">
+              <h3 class="tarjeta__titulo">1938</h3>
+              <p>Visita del presidente de la República, Eduardo Santos, el 29 de junio.</p>
+            </article>
+          </div>
+        </div>
+        <button type="button" class="carrusel__boton carrusel__boton--siguiente" aria-label="Ver hitos siguientes" hidden><span aria-hidden="true">&#9655;</span></button>
+        <p class="carrusel__estado sr-only" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- Reseña histórica: síntesis basada en informacion-sap.pdf -->
+    <section class="historia contenedor">
+      <h2>Reseña Histórica</h2>
+      <p>
+        La Institución Educativa San Antonio de Padua tiene sus orígenes en 1926,
+        cuando el Concejo Municipal de Timbío decidió destinar el edificio de la
+        antigua Escuela Urbana de Niñas a una comunidad religiosa. Con este
+        propósito se estableció contacto con la Congregación de las Hermanas
+        Franciscanas de María Inmaculada, y el 13 de septiembre de 1934 se firmó
+        el contrato oficial con la Reverenda Madre Sor María Caridad Brader.
+      </p>
+      <p>
+        Las Hermanas Franciscanas llegaron a Timbío el 19 de diciembre de 1934.
+        Poco después, el 21 de diciembre, fueron posesionadas las primeras
+        directivas: Sor María Esperanza como Directora y Sor María Benilda como
+        Subdirectora. Las actividades académicas comenzaron oficialmente el 9 de
+        enero de 1935 con 299 estudiantes, y la inauguración oficial se realizó
+        el 2 de febrero de ese mismo año.
+      </p>
+      <p>
+        La institución creció rápidamente: durante el año lectivo 1935-1936 se
+        matricularon 392 estudiantes, cifra que aumentó a 406 en 1936-1937. En
+        1938 fue sede de una Semana Pedagógica que reunió a docentes de Timbío,
+        Sotará y El Tambo, y el 29 de junio de ese año recibió la visita del
+        entonces presidente de la República, Eduardo Santos.
+      </p>
+      <p>
+        Desde entonces, la institución ha continuado su labor educativa,
+        ofreciendo hoy los niveles de Preescolar, Básica Primaria, Básica
+        Secundaria y Media Técnica, bajo el lema que la identifica: "Virtud y
+        Saber".
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+
+      <div class="footer__institucion">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="footer__escudo">
+        <p class="footer__nombre">Institución Educativa San Antonio de Padua</p>
+        <!-- Redes sociales: Facebook enlaza a la página oficial; las demás se muestran como texto porque sus enlaces siguen pendientes -->
+        <ul class="footer__redes">
+          <li><a href="https://www.facebook.com/ColegioSanAntonioDePaduaTimbio" class="footer__red-social footer__red-social--enlace" target="_blank" rel="noopener noreferrer">Facebook<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li><span class="footer__red-social">Instagram</span></li>
+          <li><span class="footer__red-social">LinkedIn</span></li>
+          <li><span class="footer__red-social">YouTube</span></li>
+        </ul>
+      </div>
+
+      <div class="footer__enlaces">
+        <h3 class="footer__titulo">Enlaces rápidos</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="servicios-academicos.html">Servicios</a></li>
+          <li><a href="nosotros-institucion.html">Nosotros</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="admisiones.html">Admisiones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contacto">
+        <h3 class="footer__titulo">Contacto</h3>
+        <ul>
+          <!-- Canales de contacto entregados por la institución (WhatsApp y correo) -->
+          <li>WhatsApp: <a href="https://wa.me/573105397139" target="_blank" rel="noopener noreferrer">310 539 7139<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li>Correo: <a href="mailto:colegiosanantoniodep@gmail.com">colegiosanantoniodep@gmail.com</a></li>
+          <li>Ubicación: Timbío, Cauca</li>
+        </ul>
+      </div>
+
+      <div class="footer__ubicacion">
+        <h3 class="footer__titulo">Ubicación</h3>
+        <!-- Dirección entregada por la institución y búsqueda de esa dirección en Google Maps (sin coordenadas ni mapa incrustado) -->
+        <div class="footer__ubicacion-pendiente">
+          <p class="footer__ubicacion-lugar">Calle 15 No. 14-89, Barrio Belén, Timbío, Cauca, Colombia</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2015%20No.%2014-89%2C%20Barrio%20Bel%C3%A9n%2C%20Timb%C3%ADo%2C%20Cauca%2C%20Colombia" class="footer__mapa" target="_blank" rel="noopener noreferrer">Ver en Google Maps<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__linea-inferior">
+      <p>&copy; 2026 Institución Educativa San Antonio de Padua. Todos los derechos reservados.</p>
+      <!-- Documentos legales: se muestran como texto porque los textos oficiales siguen pendientes -->
+      <ul class="footer__legal">
+        <li><span>Política de Privacidad</span></li>
+        <li><span>Términos y Condiciones</span></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/carousel.js"></script>
+  <script src="../js/visor-fotos.js"></script>
+</body>
+</html>

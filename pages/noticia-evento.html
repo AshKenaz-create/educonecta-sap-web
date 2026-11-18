@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias y Eventos - Institución Educativa San Antonio de Padua</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="../index.html" class="header__logo">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="header__escudo">
+        <span class="header__nombre">Institución Educativa San Antonio de Padua</span>
+      </a>
+
+      <!-- Botón del menú móvil: solo visible en pantallas pequeñas -->
+      <button type="button" class="header__menu-boton" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a href="../index.html" class="nav__enlace">Inicio</a></li>
+          <li><a href="servicios-academicos.html" class="nav__enlace">Servicios</a></li>
+          <li><a href="nosotros-institucion.html" class="nav__enlace">Nosotros</a></li>
+          <li><a href="noticias.html" class="nav__enlace">Noticias</a></li>
+          <li><a href="admisiones.html" class="nav__enlace">Admisiones</a></li>
+        </ul>
+      </nav>
+
+      <a href="contacto.html" class="boton boton--primario">Contáctanos</a>
+    </div>
+  </header>
+
+  <main class="contenido-principal">
+
+    <!--
+      Banner provisional hecho solo con CSS (franja de color con el nombre de
+      la sección). Se reemplazará cuando el equipo audiovisual defina el banner
+      oficial. El texto no es un encabezado: el h1 de la página es el título
+      de cada noticia.
+    -->
+    <section class="banner banner--franja">
+      <p class="banner__franja-texto">Noticias y Eventos</p>
+    </section>
+
+    <!--
+      Detalle de noticia: una sola plantilla para las cuatro tarjetas de
+      noticias.html. Cada enlace indica cuál mostrar con ?noticia=identificador
+      y noticia.js oculta las demás. Los textos explican de forma general el
+      tema de cada publicación; no relatan fechas ni detalles de una actividad
+      concreta (ver PENDIENTES.md).
+    -->
+    <div class="detalle-noticias contenedor">
+      <a href="noticias.html" class="boton boton--primario detalle-noticias__volver"><span aria-hidden="true">&larr;</span> Volver a Noticias</a>
+
+      <!-- Mensaje que se ve sin JavaScript: en ese caso aparecen las cuatro noticias -->
+      <p class="detalle-noticias__sin-js">Se muestran todas las publicaciones de la sección Noticias y Eventos.</p>
+
+      <!-- Mensaje para un enlace sin noticia o con un identificador que no existe -->
+      <div class="detalle-noticias__no-encontrada" hidden>
+        <h1>Noticia no encontrada</h1>
+        <p>El enlace no corresponde a ninguna publicación disponible. Puedes consultar las publicaciones en la sección Noticias.</p>
+      </div>
+
+      <article class="detalle-noticia" id="encuentro-estudiantes">
+        <h1 class="detalle-noticia__titulo">Encuentro institucional de estudiantes</h1>
+        <div class="detalle-noticia__contenido">
+          <img src="../assets/images/noticias/noticia-01.jpg" alt="Estudiantes formados en el patio de la institución" class="detalle-noticia__imagen">
+          <div class="detalle-noticia__texto">
+            <p>Los encuentros institucionales reúnen a estudiantes de distintos grados en un mismo espacio. Son momentos que fortalecen el sentido de pertenencia, permiten compartir mensajes de interés para toda la comunidad educativa y promueven la participación y la sana convivencia entre compañeros.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="detalle-noticia" id="formacion-orientacion">
+        <h1 class="detalle-noticia__titulo">Espacio de formación y orientación</h1>
+        <div class="detalle-noticia__contenido">
+          <img src="../assets/images/noticias/noticia-02.jpg" alt="Estudiantes atendiendo una charla en un salón" class="detalle-noticia__imagen">
+          <div class="detalle-noticia__texto">
+            <p>Los espacios de formación y orientación acompañan a los estudiantes en temas que van más allá de las asignaturas, como el proyecto de vida, la toma de decisiones y el autocuidado. Las charlas y actividades guiadas les ofrecen herramientas para su crecimiento personal y académico.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="detalle-noticia" id="jornada-academica">
+        <h1 class="detalle-noticia__titulo">Jornada académica en el aula</h1>
+        <div class="detalle-noticia__contenido">
+          <img src="../assets/images/noticias/noticia-03.jpg" alt="Estudiantes resolviendo una prueba escrita en el aula" class="detalle-noticia__imagen">
+          <div class="detalle-noticia__texto">
+            <p>Las jornadas académicas permiten a los estudiantes poner en práctica lo aprendido en clase. Este tipo de actividades ayuda a reconocer los avances, identificar los temas que necesitan refuerzo y fortalecer hábitos como la concentración, la responsabilidad y la organización del tiempo.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="detalle-noticia" id="actividad-cultural">
+        <h1 class="detalle-noticia__titulo">Actividad cultural estudiantil</h1>
+        <div class="detalle-noticia__contenido">
+          <img src="../assets/images/noticias/noticia-04.jpg" alt="Grupo de estudiantes con trajes de danza en el patio" class="detalle-noticia__imagen">
+          <div class="detalle-noticia__texto">
+            <p>Las actividades culturales son una oportunidad para que los estudiantes expresen su creatividad por medio de la danza, la música y otras manifestaciones artísticas. Estas experiencias fortalecen el trabajo en equipo, el respeto por las tradiciones y el encuentro de toda la comunidad educativa.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+
+      <div class="footer__institucion">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="footer__escudo">
+        <p class="footer__nombre">Institución Educativa San Antonio de Padua</p>
+        <!-- Redes sociales: Facebook enlaza a la página oficial; las demás se muestran como texto porque sus enlaces siguen pendientes -->
+        <ul class="footer__redes">
+          <li><a href="https://www.facebook.com/ColegioSanAntonioDePaduaTimbio" class="footer__red-social footer__red-social--enlace" target="_blank" rel="noopener noreferrer">Facebook<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li><span class="footer__red-social">Instagram</span></li>
+          <li><span class="footer__red-social">LinkedIn</span></li>
+          <li><span class="footer__red-social">YouTube</span></li>
+        </ul>
+      </div>
+
+      <div class="footer__enlaces">
+        <h3 class="footer__titulo">Enlaces rápidos</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="servicios-academicos.html">Servicios</a></li>
+          <li><a href="nosotros-institucion.html">Nosotros</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="admisiones.html">Admisiones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contacto">
+        <h3 class="footer__titulo">Contacto</h3>
+        <ul>
+          <!-- Canales de contacto entregados por la institución (WhatsApp y correo) -->
+          <li>WhatsApp: <a href="https://wa.me/573105397139" target="_blank" rel="noopener noreferrer">310 539 7139<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li>Correo: <a href="mailto:colegiosanantoniodep@gmail.com">colegiosanantoniodep@gmail.com</a></li>
+          <li>Ubicación: Timbío, Cauca</li>
+        </ul>
+      </div>
+
+      <div class="footer__ubicacion">
+        <h3 class="footer__titulo">Ubicación</h3>
+        <!-- Dirección entregada por la institución y búsqueda de esa dirección en Google Maps (sin coordenadas ni mapa incrustado) -->
+        <div class="footer__ubicacion-pendiente">
+          <p class="footer__ubicacion-lugar">Calle 15 No. 14-89, Barrio Belén, Timbío, Cauca, Colombia</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2015%20No.%2014-89%2C%20Barrio%20Bel%C3%A9n%2C%20Timb%C3%ADo%2C%20Cauca%2C%20Colombia" class="footer__mapa" target="_blank" rel="noopener noreferrer">Ver en Google Maps<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__linea-inferior">
+      <p>&copy; 2026 Institución Educativa San Antonio de Padua. Todos los derechos reservados.</p>
+      <!-- Documentos legales: se muestran como texto porque los textos oficiales siguen pendientes -->
+      <ul class="footer__legal">
+        <li><span>Política de Privacidad</span></li>
+        <li><span>Términos y Condiciones</span></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/noticia.js"></script>
+</body>
+</html>

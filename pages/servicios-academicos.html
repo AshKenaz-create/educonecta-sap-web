@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios Académicos - Institución Educativa San Antonio de Padua</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="../index.html" class="header__logo">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="header__escudo">
+        <span class="header__nombre">Institución Educativa San Antonio de Padua</span>
+      </a>
+
+      <!-- Botón del menú móvil: solo visible en pantallas pequeñas -->
+      <button type="button" class="header__menu-boton" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a href="../index.html" class="nav__enlace">Inicio</a></li>
+          <li><a href="servicios-academicos.html" class="nav__enlace" aria-current="page">Servicios</a></li>
+          <li><a href="nosotros-institucion.html" class="nav__enlace">Nosotros</a></li>
+          <li><a href="noticias.html" class="nav__enlace">Noticias</a></li>
+          <li><a href="admisiones.html" class="nav__enlace">Admisiones</a></li>
+        </ul>
+      </nav>
+
+      <a href="contacto.html" class="boton boton--primario">Contáctanos</a>
+    </div>
+  </header>
+
+  <main class="contenido-principal">
+
+    <!-- Banner de sección -->
+    <section class="banner">
+      <img src="../assets/images/servicios/banner-academicos.jpg" alt="Estudiantes frente a la fachada de la Institución Educativa San Antonio de Padua" class="banner__imagen">
+      <div class="banner__contenido">
+        <h1>Servicios Académicos</h1>
+      </div>
+    </section>
+
+    <!-- Navegación entre las páginas de la sección Servicios -->
+    <nav class="navegacion-seccion contenedor" aria-label="Navegación de Servicios">
+      <ul class="navegacion-seccion__lista">
+        <li><a href="servicios-academicos.html" class="navegacion-seccion__enlace navegacion-seccion__enlace--activo" aria-current="page">Académicos</a></li>
+        <li><a href="servicios-extracurriculares.html" class="navegacion-seccion__enlace">Extracurriculares</a></li>
+      </ul>
+    </nav>
+
+    <!--
+      Oferta Académica: "Básica Primaria" y "Básica Secundaria" están
+      respaldadas por informacion-sap.pdf. La tercera tarjeta usa la
+      denominación específica del documento, "Media Técnica", en vez de
+      "Educación Media" (etiqueta genérica del wireframe).
+
+      Pendiente de confirmación con el equipo: informacion-sap.pdf también
+      menciona "Preescolar" como nivel ofrecido por la institución, pero el
+      wireframe solo contempla estas 3 tarjetas. No se agrega una cuarta
+      tarjeta de Preescolar en esta etapa.
+      Las imágenes son piezas gráficas de apoyo: no validan la denominación
+      del nivel, la modalidad ni el uniforme. Cada pieza ya muestra el nombre
+      del nivel, por eso la tarjeta no repite el título y el nombre va en el
+      texto alternativo de la imagen.
+    -->
+    <section class="oferta-academica contenedor">
+      <h2>Oferta Académica</h2>
+      <div class="oferta-academica__grid">
+        <article class="tarjeta">
+          <img src="../assets/images/servicios/primaria.jpg" alt="Básica Primaria" class="tarjeta__imagen tarjeta__imagen--completa">
+        </article>
+        <article class="tarjeta">
+          <img src="../assets/images/servicios/secundaria.jpg" alt="Básica Secundaria" class="tarjeta__imagen tarjeta__imagen--completa">
+        </article>
+        <article class="tarjeta">
+          <img src="../assets/images/servicios/media-tecnica.jpg" alt="Media Técnica" class="tarjeta__imagen tarjeta__imagen--completa">
+        </article>
+      </div>
+    </section>
+
+    <!--
+      Materias: áreas orientativas de práctica para el prototipo. No son el
+      plan de estudios oficial; las asignaturas reales siguen sin confirmar.
+    -->
+    <section class="materias contenedor">
+      <h2>Materias</h2>
+      <div class="materias__grid">
+        <article class="tarjeta tarjeta--circulo">
+          <h3 class="tarjeta__titulo"><span class="circulo circulo--compacto">Lenguaje y comunicación</span></h3>
+          <p>Fortalecimiento de la lectura, la escritura, la expresión oral y la comprensión como herramientas para comunicarse y aprender.</p>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <h3 class="tarjeta__titulo"><span class="circulo circulo--compacto">Pensamiento lógico y matemático</span></h3>
+          <p>Desarrollo del razonamiento, la resolución de problemas y la comprensión de conceptos matemáticos aplicados a diferentes situaciones.</p>
+        </article>
+        <article class="tarjeta tarjeta--circulo">
+          <h3 class="tarjeta__titulo"><span class="circulo circulo--compacto">Ciencias, tecnología y entorno</span></h3>
+          <p>Exploración del entorno, pensamiento científico y uso responsable de la tecnología como apoyo para el aprendizaje.</p>
+        </article>
+      </div>
+    </section>
+
+    <!--
+      Plataforma de Notas: acceso a SIGIA, sitio externo. EduConecta SAP no pide
+      ni guarda usuarios ni contraseñas; la autenticación se hace en SIGIA.
+    -->
+    <section class="plataforma-notas contenedor">
+      <h2>Plataforma de Notas</h2>
+      <p>La consulta de notas se realiza en la plataforma SIGIA. El ingreso y la autenticación se hacen directamente en ese sitio.</p>
+      <a href="https://plataformasigia.net" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Ingresar a la plataforma de notas<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+    </section>
+
+    <!--
+      Agenda Escolar: pieza gráfica entregada por el equipo. Sus fechas son
+      ilustrativas y siguen pendientes de confirmación (ver PENDIENTES.md).
+    -->
+    <section class="agenda-escolar contenedor">
+      <h2>Agenda Escolar</h2>
+      <img src="../assets/images/servicios/agenda-escolar.jpg" alt="Pieza gráfica de la Agenda Escolar de la Institución Educativa San Antonio de Padua" class="agenda-escolar__imagen">
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+
+      <div class="footer__institucion">
+        <!-- Escudo institucional provisional (versión con fondo blanco) -->
+        <img src="../assets/images/institucional/escudo-sap.png" alt="Escudo de la Institución Educativa San Antonio de Padua" class="footer__escudo">
+        <p class="footer__nombre">Institución Educativa San Antonio de Padua</p>
+        <!-- Redes sociales: Facebook enlaza a la página oficial; las demás se muestran como texto porque sus enlaces siguen pendientes -->
+        <ul class="footer__redes">
+          <li><a href="https://www.facebook.com/ColegioSanAntonioDePaduaTimbio" class="footer__red-social footer__red-social--enlace" target="_blank" rel="noopener noreferrer">Facebook<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li><span class="footer__red-social">Instagram</span></li>
+          <li><span class="footer__red-social">LinkedIn</span></li>
+          <li><span class="footer__red-social">YouTube</span></li>
+        </ul>
+      </div>
+
+      <div class="footer__enlaces">
+        <h3 class="footer__titulo">Enlaces rápidos</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="servicios-academicos.html">Servicios</a></li>
+          <li><a href="nosotros-institucion.html">Nosotros</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="admisiones.html">Admisiones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contacto">
+        <h3 class="footer__titulo">Contacto</h3>
+        <ul>
+          <!-- Canales de contacto entregados por la institución (WhatsApp y correo) -->
+          <li>WhatsApp: <a href="https://wa.me/573105397139" target="_blank" rel="noopener noreferrer">310 539 7139<span class="sr-only"> (se abre en una pestaña nueva)</span></a></li>
+          <li>Correo: <a href="mailto:colegiosanantoniodep@gmail.com">colegiosanantoniodep@gmail.com</a></li>
+          <li>Ubicación: Timbío, Cauca</li>
+        </ul>
+      </div>
+
+      <div class="footer__ubicacion">
+        <h3 class="footer__titulo">Ubicación</h3>
+        <!-- Dirección entregada por la institución y búsqueda de esa dirección en Google Maps (sin coordenadas ni mapa incrustado) -->
+        <div class="footer__ubicacion-pendiente">
+          <p class="footer__ubicacion-lugar">Calle 15 No. 14-89, Barrio Belén, Timbío, Cauca, Colombia</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2015%20No.%2014-89%2C%20Barrio%20Bel%C3%A9n%2C%20Timb%C3%ADo%2C%20Cauca%2C%20Colombia" class="footer__mapa" target="_blank" rel="noopener noreferrer">Ver en Google Maps<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__linea-inferior">
+      <p>&copy; 2026 Institución Educativa San Antonio de Padua. Todos los derechos reservados.</p>
+      <!-- Documentos legales: se muestran como texto porque los textos oficiales siguen pendientes -->
+      <ul class="footer__legal">
+        <li><span>Política de Privacidad</span></li>
+        <li><span>Términos y Condiciones</span></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
